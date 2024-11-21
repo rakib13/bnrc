@@ -612,7 +612,7 @@ input:-ms-input-placeholder {
 /*For Home Section*/
 
 .home {
-    background: url(../images/img-banner.png) no-repeat center;
+    background: url(../images/banner-bnrc.jpg) no-repeat center;
     /*  url(../images/header-bg.jpg) no-repeat center;   */
     -moz-background-size: cover;
     -webkit-background-size: cover;
