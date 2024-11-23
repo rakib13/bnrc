@@ -612,19 +612,20 @@ input:-ms-input-placeholder {
 /*For Home Section*/
 
 .home {
-    background: url(../images/banner-bnrc.jpg) no-repeat center;
+    background: url(../images/banner-bnrc.png) no-repeat center;
     /*  url(../images/header-bg.jpg) no-repeat center;   */
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
+    margin-top: 80px;
     overflow: hidden;
 }
 
 .home-content {
     margin-top: 180px;
-    margin: 180px 0;
+margin-bottom: 200px;
     color: #fff;
     text-transform: uppercase;
     width: 75%;
