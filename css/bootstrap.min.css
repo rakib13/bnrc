@@ -6825,7 +6825,7 @@ fieldset:disabled .btn {
   color: inherit !important;
 }
 .bg-primary {
-  background-color: #eeeeee !important; // change here for banner
+  background-color: #b7fef7 !important; // change here for banner
 }
 .bg-secondary {
   background-color: #0be1ff !important;
@@ -10018,4 +10018,4 @@ fieldset:disabled .btn {
   .d-print-none {
     display: none !important;
   }
-}
+})
