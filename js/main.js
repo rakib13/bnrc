@@ -36,11 +36,11 @@
         smartSpeed: 500,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
+       // nav : true,
+        // navText : [
+        //     '<i class="bi bi-arrow-left"></i>',
+        //     '<i class="bi bi-arrow-right"></i>'
+        // ],
     });
 
 
@@ -53,11 +53,11 @@
         dots: false,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
-            '<i class="fa fa-arrow-right"></i>',
-            '<i class="fa fa-arrow-left"></i>'
-        ],
+       // nav : true,
+        // navText : [
+        //     '<i class="fa fa-arrow-right"></i>',
+        //     '<i class="fa fa-arrow-left"></i>'
+        // ],
         responsiveClass: true,
         responsive: {
             0:{
