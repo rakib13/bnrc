@@ -11,6 +11,7 @@
   visibility: visible;
   opacity: 1;
 }
+
 /*** Spinner End ***/
 
 .back-to-top {
@@ -119,6 +120,7 @@
   transition: 0.5s;
   opacity: 1;
 }
+
 /*** Topbar End ***/
 
 /*** Navbar Start ***/
@@ -252,6 +254,7 @@
     opacity: 1;
   }
 }
+
 /*** Navbar End ***/
 
 /*** Carousel Hero Header Start ***/
@@ -299,7 +302,7 @@
   height: 100%;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
+  /* background: rgba(0, 0, 0, 0.2); */
   display: flex;
   align-items: center;
 }
@@ -333,6 +336,7 @@
     margin-left: 45px;
   }
 }
+
 /*** Carousel Hero Header End ***/
 
 /*** Single Page Hero Header Start ***/
@@ -355,6 +359,7 @@
 .bg-breadcrumb .breadcrumb .breadcrumb-item a {
   color: var(--bs-white);
 }
+
 /*** Single Page Hero Header End ***/
 
 /*** Feature Start ***/
@@ -414,6 +419,7 @@
 .feature .feature-item:hover .feature-icon {
   color: var(--bs-white);
 }
+
 .feature .feature-item:hover h4,
 .feature .feature-item:hover p {
   color: var(--bs-white);
@@ -435,6 +441,7 @@
 .service .service-item {
   border-radius: 10px;
 }
+
 .service .service-item .service-img {
   position: relative;
   overflow: hidden;
@@ -521,20 +528,12 @@
   color: var(--bs-white);
 }
 
-.service
-  .service-item:hover
-  .service-content
-  .service-content-inner
-  .btn.btn-primary {
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary {
   color: var(--bs-primary);
   background: var(--bs-white);
 }
 
-.service
-  .service-item:hover
-  .service-content
-  .service-content-inner
-  .btn.btn-primary:hover {
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary:hover {
   color: var(--bs-white);
   background: var(--bs-dark);
 }
@@ -560,6 +559,7 @@
 .service .service-item:hover .service-content::after {
   height: 100%;
 }
+
 /*** Service End ***/
 
 /*** FAQs Start ***/
@@ -569,14 +569,11 @@
   font-size: 18px;
 }
 
-.faq-section
-  .accordion
-  .accordion-item
-  .accordion-header
-  .accordion-button.collapsed {
+.faq-section .accordion .accordion-item .accordion-header .accordion-button.collapsed {
   color: var(--bs-primary);
   background: var(--bs-light);
 }
+
 /*** FAQs End ***/
 
 /*** Blog Start ***/
@@ -650,6 +647,7 @@
 .blog .blog-item:hover .blog-content a.btn:hover {
   color: var(--bs-primary);
 }
+
 /*** Blog End ***/
 
 /*** Team Start ***/
@@ -713,6 +711,7 @@
 .team .team-item:hover .team-title {
   background: var(--bs-dark);
 }
+
 /*** Team End ***/
 
 /*** Testimonial Start ***/
@@ -752,6 +751,7 @@
   background: var(--bs-dark);
   color: var(--bs-white);
 }
+
 /*** Testimonial End ***/
 
 /*** Contact Start ***/
@@ -803,6 +803,7 @@
   position: relative;
   z-index: 9;
 }
+
 /*** Contact End ***/
 
 /*** Footer Start ***/
@@ -888,14 +889,19 @@
 
 /* amr kora css */
 .footer-instagram {
-  width: 100%; /* or set a fixed width like 400px */
-    max-width: 600px; /* optional: limit max width */
-    margin: 0 auto;   /* center the container horizontally */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;              /* Optional: space between images */
+  width: 100%;
+  /* or set a fixed width like 400px */
+  max-width: 600px;
+  /* optional: limit max width */
+  margin: 0 auto;
+  /* center the container horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Optional: space between images */
 }
+
 /*** Footer End ***/
 
 /*** copyright Start ***/
@@ -903,4 +909,16 @@
   background: var(--bs-dark);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+
 /*** copyright end ***/
+
+
+/* BG Banner */
+
+.bg-banner {
+  /* change here */
+
+  /* background-color: linear-gradient(180deg, #c8fff9 0%, #f5fffe 100%) !important;   */
+  background: #C8FFF9;
+  background: linear-gradient(180deg, rgba(200, 255, 249, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
