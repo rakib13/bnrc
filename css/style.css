@@ -818,7 +818,7 @@
 
 .footer .footer-item a {
   line-height: 35px;
-  color: var(--bs-body);
+  color: var(--bs-danger);
   transition: 0.5s;
 }
 
@@ -827,7 +827,8 @@
 }
 
 .footer .footer-item a:hover {
-  color: var(--bs-primary);
+  color: #177838
+  /* var(--bs-white); */
 }
 
 .footer .footer-item .footer-btn a,
@@ -876,15 +877,17 @@
 
 .footer .footer-item .footer-btn a {
   background: var(--bs-light);
-  color: var(--bs-primary);
+  color: #b00200 /* var(--bs-primary); */
 }
 
 .footer .footer-item .footer-btn a:hover {
-  background: var(--bs-primary);
+  /* background: var(--bs-primary); */
+  background-color: #177838 /* #b00200; */
 }
 
 .footer .footer-item .footer-btn a:hover i {
-  color: var(--bs-white);
+  color: #b00200
+  /* var(--bs-white); */
 }
 
 /* amr kora css */
