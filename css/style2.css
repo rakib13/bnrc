@@ -1,0 +1,19 @@
+.bg-breadcrumb {
+  /* change here */
+
+  /* background-color: linear-gradient(180deg, #c8fff9 0%, #f5fffe 100%) !important;   */
+  background: #c8fff9;
+  background: linear-gradient(
+    180deg,
+    rgba(200, 255, 249, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.breadcrumb-item li a {
+  color: #800000;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+  text-align: justify;
+}
