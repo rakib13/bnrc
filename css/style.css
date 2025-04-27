@@ -357,7 +357,7 @@
 }
 
 .bg-breadcrumb .breadcrumb .breadcrumb-item a {
-  color: var(--bs-white);
+  color: var(--bs-danger);
 }
 
 /*** Single Page Hero Header End ***/
