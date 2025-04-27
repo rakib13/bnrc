@@ -17,3 +17,15 @@
   font-family: Arial, sans-serif;
   text-align: justify;
 }
+
+.brand-subtext {
+  font-size: 14px;
+  color: #800000;
+  font-weight: 300;
+}
+
+.brand-maintext {
+  font-size: 20px;
+  color: #800000; /* Maroon color */
+  font-weight: 600;
+}
