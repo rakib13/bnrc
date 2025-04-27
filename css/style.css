@@ -942,6 +942,14 @@
 }
 
 /* about page css  start */
+.about-item-content h3 {
+  color: #4a154b; /* Dark purple */
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid #800000; /* Gold underline */
+  padding-bottom: 8px;
+}
 .about-item-content h4 {
   color: #4a154b; /* Dark purple */
   font-size: 22px;
