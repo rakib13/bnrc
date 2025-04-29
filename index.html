@@ -40,11 +40,10 @@
 <body>
 
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div id="preloader">
+        <img src="./img/logo-bnrc.jpeg" alt="Logo" width="200px">
+        <img src="./img/pre-loader.gif" alt="">
+        <!-- <p>Loading...</p> -->
     </div>
     <!-- Spinner End -->
 
@@ -90,7 +89,7 @@
     </div>
     <!-- Topbar End -->
 
-    <!-- Navbar & Hero Start -->
+    <!-- Navbar Start -->
     <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -149,29 +148,7 @@
             </nav>
         </div>
     </div>
-    <!-- Navbar & Hero End -->
-
-    <!-- Modal Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center bg-primary">
-                    <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="keywords"
-                            aria-describedby="search-icon-1">
-                        <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i
-                                class="fa fa-search"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Search End -->
-
+    <!-- Navbar End -->
 
     <!-- Banner Design -->
     <!-- Carousel Start -->
@@ -238,7 +215,7 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- Feature Start -->
+    <!-- Introduction Start -->
     <div class="container-fluid feature bg-light pb-5">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 1200px;">
@@ -267,7 +244,7 @@
                         <p class="mb-4">Exploring the institutions, processes, and policies that shape effective
                             governance and democratic engagement.
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
@@ -279,7 +256,7 @@
                         <p class="mb-4">Analyzing electoral systems, voter demographics, and trends to promote fair and
                             transparent elections.
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
@@ -291,7 +268,7 @@
                         <p class="mb-4">Evaluating policies in areas like healthcare, education, and economic
                             development to promote equity and social welfare.
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
@@ -303,15 +280,15 @@
                         <p class="mb-4">Investigating global trends, conflicts, and diplomacy to understand their impact
                             on national and international policy.
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Feature End -->
+    <!-- Introduction End -->
 
-    <!-- About Start -->
+    <!-- Commitment Start -->
     <div class="container-fluid bg-light about pb-5">
         <div class="container pb-5">
             <div class="row g-5">
@@ -332,55 +309,25 @@
                             comprehensive database of political and social data.</p>
                         <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Events & Seminars:
                             Engaging discussions with experts, policymakers, and community leaders.</p>
-                        <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>ublications &
+                        <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Publications &
                             Newsletters: Stay updated with our latest findings and commentary on current political
                             issues.</p>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Information</a>
                     </div>
                 </div>
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="bg-white rounded p-5 h-100">
                         <div class="row g-4 justify-content-center">
                             <div class="col-12">
-                                <div class="rounded bg-light">
+                                <div class="rounded bg-light mx-auto">
                                     <img src="img/index-gallry-1.jpg" class="img-fluid rounded w-100" alt="">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="counter-item bg-light rounded p-3 h-100">
-                                    <div class="counter-counting">
-                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
-                                        <span class="h1 fw-bold text-primary">+</span>
-                                    </div>
-                                    <h4 class="mb-0 text-dark">Insurance Policies</h4>
-                                </div>
+                            <div class="col-sm-3 col-md-3">
                             </div>
-                            <div class="col-sm-6">
-                                <div class="counter-item bg-light rounded p-3 h-100">
-                                    <div class="counter-counting">
-                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
-                                        <span class="h1 fw-bold text-primary">+</span>
-                                    </div>
-                                    <h4 class="mb-0 text-dark">Awards WON</h4>
-                                </div>
+                            <div class="col-sm-6 col-md-6">
+                                <a class="btn btn-primary rounded-pill py-3 px-5 mx-auto" href="#">More Information</a>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="counter-item bg-light rounded p-3 h-100">
-                                    <div class="counter-counting">
-                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
-                                        <span class="h1 fw-bold text-primary">+</span>
-                                    </div>
-                                    <h4 class="mb-0 text-dark">Skilled Agents</h4>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="counter-item bg-light rounded p-3 h-100">
-                                    <div class="counter-counting">
-                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
-                                        <span class="h1 fw-bold text-primary">+</span>
-                                    </div>
-                                    <h4 class="mb-0 text-dark">Team Members</h4>
-                                </div>
+                            <div class="col-sm-3 col-md-3">
                             </div>
                         </div>
                     </div>
@@ -388,7 +335,7 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Commitment End -->
 
     <!-- Service Start -->
     <div class="container-fluid service py-5">
@@ -475,7 +422,7 @@
                     </div>
                 </div>
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Services</a>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More of Us</a>
                 </div>
             </div>
         </div>
@@ -650,7 +597,8 @@
                 <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="https://api.bnpbd.org/api/upload/images/our-leader-215252-ff2f.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <img src="https://api.bnpbd.org/api/upload/images/our-leader-215252-ff2f.jpg"
+                                class="img-fluid rounded-top w-100" alt="">
                             <div class="team-icon">
                                 <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -671,7 +619,8 @@
                 <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="https://api.bnpbd.org/api/upload/images/our-leader-215252-1--f7f6.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <img src="https://api.bnpbd.org/api/upload/images/our-leader-215252-1--f7f6.jpg"
+                                class="img-fluid rounded-top w-100" alt="">
                             <div class="team-icon">
                                 <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -692,7 +641,8 @@
                 <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="https://api.bnpbd.org/api/upload/images/our-leader-215252-2--66c6.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <img src="https://api.bnpbd.org/api/upload/images/our-leader-215252-2--66c6.jpg"
+                                class="img-fluid rounded-top w-100" alt="">
                             <div class="team-icon">
                                 <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -1057,6 +1007,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 400); // Adjust the delay (in milliseconds) to match your animation duration
+        });
+    </script>
 </body>
 
 </html>
