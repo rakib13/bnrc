@@ -110,8 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const pdfFrame = document.getElementById('pdf-frame');
     const closeModal = document.getElementById('close-modal');
 
+    // Listen on document for any click on '.pdf-link'
     document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('pdf-link')) {
+        if (e.target.matches('.pdf-link')) {
             e.preventDefault();
             const pdfSrc = e.target.getAttribute('data-pdf');
             pdfFrame.src = pdfSrc;
@@ -131,4 +132,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
