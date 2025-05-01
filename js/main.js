@@ -10,11 +10,18 @@
         }, 1);
     };
     spinner(0);
+
+    //Pre loader 
+    window.addEventListener('load', function () {
+        const preloader = document.getElementById('preloader');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500); // Adjust the delay (in milliseconds) to match your animation duration
+    });
     
     
     // Initiate the wowjs
     new WOW().init();
-    
 
     // Sticky Navbar
     $(window).scroll(function () {
