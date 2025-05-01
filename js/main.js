@@ -141,120 +141,117 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
-// gallery js
+// gallery js.........................................................................
 document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
-    const videoThumbnail = document.querySelector('.video-thumbnail');
-    const videoPopup = document.querySelector('.video-popup-modal');
-    const closeModal = document.querySelector('.close-modal');
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const iframe = document.querySelector('.modal-content iframe');
-    
-    // Video ID
-    const videoId = 'UKhd0TsfMYo';
-    
-    // Open modal when thumbnail is clicked
-    if (videoThumbnail) {
-        videoThumbnail.addEventListener('click', function() {
-            videoPopup.style.display = 'flex';
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        });
-    }
-    
-    // Close modal functions
-    function closeVideoModal() {
-        videoPopup.style.display = 'none';
-        iframe.src = ''; // Stop video when closing
-        document.body.style.overflow = ''; // Re-enable scrolling
-    }
-    
-    // Close modal when X button is clicked
-    if (closeModal) {
-        closeModal.addEventListener('click', closeVideoModal);
-    }
-    
-    // Close modal when overlay is clicked
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', closeVideoModal);
-    }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && videoPopup.style.display === 'flex') {
-            closeVideoModal();
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
+    // Load More Videos functionality
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     const videoContainer = document.getElementById('video-container');
-    const allVideos = videoContainer.querySelectorAll('.col-md-6.col-lg-6.col-xl-3');
-    let visibleCount = 4; // Number initially visible
     
-    // Initially hide all videos beyond the first 4
-    allVideos.forEach((video, index) => {
-        if (index >= visibleCount) {
-            video.style.display = 'none';
-        }
-    });
-    
-    loadMoreBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        console.log('Button clicked'); // Debugging line
+    if (loadMoreBtn && videoContainer) {
+        const allVideos = videoContainer.querySelectorAll('.col-md-6.col-lg-6.col-xl-3');
+        let visibleCount = 4; // Number initially visible
         
-        // Show next 4 videos
-        const nextBatch = visibleCount + 4;
-        
-        for (let i = visibleCount; i < nextBatch && i < allVideos.length; i++) {
-            if (allVideos[i]) {
-                allVideos[i].style.display = 'block';
-                console.log('Showing video', i); // Debugging line
+        // Initially hide all videos beyond the first 4
+        allVideos.forEach((video, index) => {
+            if (index >= visibleCount) {
+                video.style.display = 'none';
             }
-        }
+        });
         
-        visibleCount = nextBatch;
-        
-        // Hide button if all videos are visible
-        if (visibleCount >= allVideos.length) {
-            loadMoreBtn.style.display = 'none';
-            console.log('All videos shown, hiding button'); // Debugging line
-        }
-    });
-    
-    // Video popup functionality (if needed)
+        loadMoreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Show next 4 videos
+            const nextBatch = visibleCount + 4;
+            
+            for (let i = visibleCount; i < nextBatch && i < allVideos.length; i++) {
+                if (allVideos[i]) {
+                    allVideos[i].style.display = 'block';
+                }
+            }
+            
+            visibleCount = nextBatch;
+            
+            // Hide button if all videos are visible
+            if (visibleCount >= allVideos.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+    }
+
+    // Video popup functionality - ONLY opens on click
     document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
-            const videoId = this.closest('[data-video-id]')?.dataset.videoId || 'UKhd0TsfMYo';
+        thumbnail.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Get video ID from closest parent with data-video-id attribute
+            const videoContainer = this.closest('[data-video-id]');
+            if (!videoContainer) return; // Safety check
+            
+            const videoId = videoContainer.getAttribute('data-video-id');
+            if (!videoId) return; // Safety check
+            
             openVideoPopup(videoId);
         });
     });
-});
     
-    // Your existing video popup functions
+    // Video popup functions
     function openVideoPopup(videoId) {
-        const popup = document.getElementById('videoPopup');
-        const iframe = popup.querySelector('iframe');
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        // Close any existing popup first
+        closeVideoPopup();
+        
+        const popup = document.createElement('div');
+        popup.className = 'video-popup-modal';
+        popup.style.display = 'none'; // Start hidden
+        
+        popup.innerHTML = `
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
+        `;
+        
+        document.body.appendChild(popup);
+        
+        // Only show after setting up everything
         popup.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        
+        // Add event listeners for the new popup
+        popup.querySelector('.modal-overlay').addEventListener('click', closeVideoPopup);
+        popup.querySelector('.close-modal').addEventListener('click', closeVideoPopup);
+        
+        // Autoplay after popup is shown
+        const iframe = popup.querySelector('iframe');
+        if (iframe) {
+            // Small delay to ensure iframe is ready
+            setTimeout(() => {
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0`;
+            }, 100);
+        }
     }
     
     function closeVideoPopup() {
-        const popup = document.getElementById('videoPopup');
-        const iframe = popup.querySelector('iframe');
-        iframe.src = '';
-        popup.style.display = 'none';
-        document.body.style.overflow = '';
+        const popup = document.querySelector('.video-popup-modal');
+        if (popup) {
+            // Pause video before removing
+            const iframe = popup.querySelector('iframe');
+            if (iframe) {
+                // Properly stop the video
+                iframe.src = '';
+            }
+            popup.remove();
+            document.body.style.overflow = '';
+        }
     }
     
-   // Add click event to all video thumbnails
-    document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
-            // Extract video ID from img src or data attribute
-            const videoId = 'UKhd0TsfMYo'; // Replace with actual video ID
-            openVideoPopup(videoId);
-        });
+    // Close with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeVideoPopup();
+        }
     });
-
+});
