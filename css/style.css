@@ -23,6 +23,54 @@
   /* Simple fade-in animation */
 }
 
+/* pop up */
+
+/* style.css */
+.popup-overlay {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Add a dark background */
+  z-index: 1;
+  /* Ensure it's on top of other elements */
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center the popup */
+  width: 350px;
+  /* Set the desired width */
+  padding: 10px;
+  background-color: white;
+  /* Or your preferred color */
+  border: 1px solid #ccc;
+  /* Add a border */
+  border-radius: 5px;
+  /* Round the corners */
+}
+
+.popup-content {
+  /* Style your popup content here */
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+}
+
+/* Ene pop up */
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

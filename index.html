@@ -41,11 +41,22 @@
 
     <!-- Spinner Start -->
     <div id="preloader">
-        <img src="./img/logo-bnrc.jpeg" alt="Logo" width="200px">
+        <img src="./img/logo-bnrc.png" alt="Logo" width="200px">
         <img src="./img/pre-loader.gif" alt="">
         <!-- <p>Loading...</p> -->
     </div>
     <!-- Spinner End -->
+
+    <!-- top page -->
+		<!-- <div class="popup-overlay" id="popupOverlay">
+			<div class="popup" id="popup">
+				<span class="close" id="closePopup" onclick="closeForm()">&times;</span>
+				<div class="popup-content">
+					<img width="100%" src="./img/Leaflet_page.jpg" alt="">
+				</div>
+			</div>
+		</div> -->
+		<!-- End Top Page -->
 
     <!-- Topbar Start -->
     <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
@@ -97,7 +108,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="#" class="navbar-brand d-flex align-items-center p-0">
-                    <img src="./img/logo-bnrc.jpeg" alt="Logo BNRC" class="me-2" style="height: 50px; width: auto;">
+                    <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 50px; width: auto;">
                     <span class="d-flex flex-column">
                         <small class="brand-maintext" style="font-size: 20px;">Bangladesh Nationalist</small>
                         <small class="brand-maintext" style="font-size: 20px;">Research Centre</small>
@@ -797,7 +808,7 @@
                                 <div class="footer-item">
                                     <a href="index.html" class="p-0">
                                         <!-- <h3 class="text-danger"><i class="fab fa-slack me-3"></i></h3> -->
-                                        <img src="img/logo-bnrc-removebg-preview.png" height="120" alt="Logo">
+                                        <img src="img/logo-bnrc.png" height="120" alt="BNRL Logo">
                                     </a>
                                     <p class="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr
                                         est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
@@ -1010,6 +1021,11 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+		function closeForm() {
+			document.getElementById("popupOverlay").style.display = "none";
+		}
+	</script>
 </body>
 
 </html>
