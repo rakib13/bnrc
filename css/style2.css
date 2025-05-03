@@ -298,3 +298,134 @@
 .video-popup-modal {
   display: none; /* Start hidden */
 }
+
+/* Mission start */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #f0f0f0;
+  padding: 10px 20px;
+}
+
+.top-bar {
+  font-size: 0.8rem;
+  text-align: right;
+  color: #555;
+}
+
+.logo-nav h1 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007c80;
+}
+
+.breadcrumb {
+  background: #007c80;
+  color: white;
+  padding: 10px 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.social-buttons button {
+  margin: 5px;
+  padding: 5px 10px;
+  background: #e0e0e0;
+  border: none;
+  cursor: pointer;
+}
+
+article h3 {
+  margin-top: 20px;
+  color: #222;
+}
+
+.related-posts {
+  background: #fafafa;
+  padding: 20px;
+  margin: 20px;
+}
+
+.related-posts h4 {
+  margin-bottom: 10px;
+}
+
+.related-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.related-posts li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+.social-buttons button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+/* Different platform styles */
+.social-buttons button:nth-child(1) {
+  background: #3b5998;
+  color: white;
+} /* Facebook */
+.social-buttons button:nth-child(2) {
+  background: #000000;
+  color: white;
+} /* Twitter (X) */
+.social-buttons button:nth-child(3) {
+  background: #555;
+  color: white;
+} /* Email */
+.social-buttons button:nth-child(4) {
+  background: #25d366;
+  color: white;
+} /* WhatsApp */
+.social-buttons button:nth-child(5) {
+  background: #0077b5;
+  color: white;
+} /* LinkedIn */
+
+.social-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Mission End */
