@@ -227,6 +227,7 @@
   padding: 0;
 }
 
+
 .navbar .navbar-nav .nav-item {
   display: flex;
   align-items: center;
@@ -238,7 +239,14 @@
 .navbar-light .navbar-nav .nav-item:hover .nav-link,
 .navbar-light .navbar-nav .nav-item.active .nav-link {
   color: var(--bs-primary);
+  border-bottom: 4px solid var(--bs-primary);
+  transition: width .5s ease, background-color .5s ease;
 }
+/* 
+.navbar-light .navbar-nav .nav-item:hover .nav-link:hover:after {
+  width: 100%;
+  background: blue;
+} */
 
 @media (max-width: 991px) {
   .navbar {
