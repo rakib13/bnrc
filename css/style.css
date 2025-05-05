@@ -233,6 +233,21 @@
   padding: 15px;
 }
 
+.navbar .navbar-nav .nav-item .nav-link:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.navbar .navbar-nav .nav-item.nav-link:hover:after {
+  width: 100%;
+  background: blue;
+}
+
 .navbar-light .navbar-nav .nav-item:hover,
 .navbar-light .navbar-nav .nav-item.active,
 .navbar-light .navbar-nav .nav-item:hover .nav-link,
@@ -613,20 +628,12 @@
   color: var(--bs-white);
 }
 
-.service
-  .service-item:hover
-  .service-content
-  .service-content-inner
-  .btn.btn-primary {
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary {
   color: var(--bs-primary);
   background: var(--bs-white);
 }
 
-.service
-  .service-item:hover
-  .service-content
-  .service-content-inner
-  .btn.btn-primary:hover {
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary:hover {
   color: var(--bs-white);
   background: var(--bs-dark);
 }
@@ -662,11 +669,7 @@
   font-size: 18px;
 }
 
-.faq-section
-  .accordion
-  .accordion-item
-  .accordion-header
-  .accordion-button.collapsed {
+.faq-section .accordion .accordion-item .accordion-header .accordion-button.collapsed {
   color: var(--bs-primary);
   background: var(--bs-light);
 }
@@ -925,7 +928,7 @@
 
 .footer .footer-item a:hover {
   color: #177838
-  /* var(--bs-white); */
+    /* var(--bs-white); */
 }
 
 .footer .footer-item .footer-btn a,
@@ -974,17 +977,19 @@
 
 .footer .footer-item .footer-btn a {
   background: var(--bs-light);
-  color: #b00200 /* var(--bs-primary); */
+  color: #b00200
+    /* var(--bs-primary); */
 }
 
 .footer .footer-item .footer-btn a:hover {
   /* background: var(--bs-primary); */
-  background-color: #177838 /* #b00200; */
+  background-color: #177838
+    /* #b00200; */
 }
 
 .footer .footer-item .footer-btn a:hover i {
   color: #b00200
-  /* var(--bs-white); */
+    /* var(--bs-white); */
 }
 
 /* amr kora css */
@@ -1019,30 +1024,34 @@
 
   /* background-color: linear-gradient(180deg, #c8fff9 0%, #f5fffe 100%) !important;   */
   background: #c8fff9;
-  background: linear-gradient(
-    180deg,
-    rgba(200, 255, 249, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(200, 255, 249, 1) 0%,
+      rgba(255, 255, 255, 1) 100%);
 }
 
 /* about page css  start */
 .about-item-content h3 {
-  color: #4a154b; /* Dark purple */
+  color: #4a154b;
+  /* Dark purple */
   font-size: 24px;
   font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  border-bottom: 2px solid #800000; /* Gold underline */
+  border-bottom: 2px solid #800000;
+  /* Gold underline */
   padding-bottom: 8px;
 }
+
 .about-item-content h4 {
-  color: #4a154b; /* Dark purple */
+  color: #4a154b;
+  /* Dark purple */
   font-size: 22px;
   font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  border-bottom: 2px solid #800000; /* Gold underline */
+  border-bottom: 2px solid #800000;
+  /* Gold underline */
   padding-bottom: 8px;
 }
+
 .about-item-content p {
   /* color: #800000; Dark gray */
   color: var(--bs-dark);
