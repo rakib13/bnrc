@@ -48,7 +48,7 @@
     <!-- Spinner End -->
 
     <!-- top page -->
-		<!-- <div class="popup-overlay" id="popupOverlay">
+    <!-- <div class="popup-overlay" id="popupOverlay">
 			<div class="popup" id="popup">
 				<span class="close" id="closePopup" onclick="closeForm()">&times;</span>
 				<div class="popup-content">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div> -->
-		<!-- End Top Page -->
+    <!-- End Top Page -->
 
     <!-- Topbar Start -->
     <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
@@ -76,26 +76,12 @@
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-flex justify-content-end">
-                        <div class="d-flex border-end border-primary pe-3">
+                        <div class="d-flex"> <!--  border-start border-end border-primary ps-2 pe-3  -->
                             <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
                             <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
-                        <div class="px-2">
-                            <a href="#"><small><i class="fas fa-file-archive text-primary me-2"></i>Archive</small></a>
-                        </div>
-                        <!-- <div class="dropdown ms-3">
-                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i
-                                        class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item">English</a>
-                                <a href="#" class="dropdown-item">Bangla</a>
-                                <a href="#" class="dropdown-item">French</a>
-                                <a href="#" class="dropdown-item">Spanish</a>
-                                <a href="#" class="dropdown-item">Arabic</a>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -108,10 +94,10 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="#" class="navbar-brand d-flex align-items-center p-0">
-                    <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 50px; width: auto;">
+                    <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 80px; width: auto;">
                     <span class="d-flex flex-column">
-                        <small class="brand-maintext" style="font-size: 20px;">Bangladesh Nationalist</small>
-                        <small class="brand-maintext" style="font-size: 20px;">Research Centre</small>
+                        <small class="brand-maintext" style="font-size: 16px;">Bangladesh Nationalist</small>
+                        <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
                     </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -119,24 +105,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-0 mx-lg-auto">
-                        <a href="./index.html" class="nav-item nav-link active">Home</a>
+                        <a href="./index.html" class="nav-item nav-link border-right active">Home</a>
                         <a href="./about.html" class="nav-item nav-link">About</a>
                         <a href="./gallery.html" class="nav-item nav-link">Gallery</a>
-                        <a href="./publications.html" class="nav-item nav-link">Publications</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                <span class="dropdown-toggle">BNP & Development</span>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a href="agriculture&economics.html" class="dropdown-item">Agriculture & Economics</a>
-                                <a href="constitution&law.html" class="dropdown-item">Constitution & Law</a>
-                                <a href="education&sports.html" class="dropdown-item">Education & Sports</a>
-                                <a href="defense&foreignAffairs.html" class="dropdown-item">Defense & Foreign
-                                    Affairs</a>
-                                <a href="health&development.html" class="dropdown-item">Health & Development</a>
-                            </div>
-                        </div>
-                        <a href="./contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="./publications.html" class="nav-item nav-link">Research & Publications</a>
+                        <a href="./publications.html" class="nav-item nav-link">RTD</a>
+                        <a href="./publications.html" class="nav-item nav-link">Archive</a>
+                        <a href="./contact.html" class="nav-item nav-link">Share your Thaught</a>
                         <!-- <div class="nav-btn px-3">
                             <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0"
                                 data-bs-toggle="modal" data-bs-target="#searchModal"><i
@@ -1022,10 +997,10 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-		function closeForm() {
-			document.getElementById("popupOverlay").style.display = "none";
-		}
-	</script>
+        function closeForm() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
