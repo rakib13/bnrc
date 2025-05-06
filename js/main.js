@@ -255,3 +255,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// mission start
+
+function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('.about-item-content').forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    // Show the selected section
+    document.getElementById(sectionId).classList.add('active');
+    
+    // Update active button in sidebar
+    document.querySelectorAll('.sidebar button').forEach(button => {
+        button.classList.remove('active');
+    });
+    event.target.classList.add('active');
+}
+// mission end

@@ -148,7 +148,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                <!-- <div class="d-none d-xl-flex flex-shrink-0 ps-4">
                     <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
                         data-wow-delay=".9s">
                         <i class="fa fa-phone-alt fa-2x"></i>
@@ -160,7 +160,7 @@
                         <span>Call to Our Experts</span>
                         <a href="tel:+88 09613241978"><span class="text-dark">Free: +88 09613241978</span></a>
                     </div>
-                </div>
+                </div> -->
             </nav>
         </div>
     </div>
@@ -204,36 +204,73 @@
     <!-- About Start -->
     <div class="container-fluid bg-light about py-5">
         <div class="container py-5">
-            <div class="row g-5">
-                <!-- Sidebar Column (Left) -->
-                <div class="col-xl-2 sidebar wow fadeInLeft" data-wow-delay="0.1s">
-                    <h2 class="mb-4">About BNRC</h2>
-                    <div class="d-flex flex-column gap-3">
-                        <button class="btn btn-outline-primary text-start"
-                            onclick="showSection('mission')">Mission</button>
-                        <button class="btn btn-outline-primary text-start"
-                            onclick="showSection('vision')">Vision</button>
-                        <button class="btn btn-outline-primary text-start">Formation of BNRC</button>
-                        <button class="btn btn-outline-primary text-start">Functions of BNRC</button>
+            <div class="row g-5 align-items-start">
+                <!-- Combined Sidebar and Content Container -->
+                <div class="col-12 d-flex p-0 position-relative"> <!-- Changed to flex container -->
+                    <!-- Sidebar (now with fixed width) -->
+                    <div class="sidebar wow fadeInLeft" data-wow-delay="0.1s" style="width: 250px;">
+                        <h2 class="mb-4">About BNRC</h2>
+                        <div class="d-flex flex-column gap-3">
+                            <button class="btn btn-outline-primary text-start active" onclick="showSection('mission')">Mission</button>
+                            <button class="btn btn-outline-primary text-start" onclick="showSection('vision')">Vision</button>
+                            <button class="btn btn-outline-primary text-start" onclick="showSection('formation')">Formation of BNRC</button>
+                            <button class="btn btn-outline-primary text-start" onclick="showSection('functions')">Functions OF BNRC</button>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Main Content Column (Right) -->
-                <div class="col-xl-10 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="about-item-content bg-white rounded p-5 h-100">
-                        <h4 class="text-primary text-center">About the Research Cell</h4>
-                        <p>The BNRC is committed to conducting high-quality research and analysis on national and
-                            international issues, providing strategic insights to the Bangladesh Nationalist Party, and
-                            contributing to the development of policies that promote sustainable growth, social justice,
-                            and national unity. Through intellectual rigor and collaboration, the BNRC aims to empower
-                            leadership and inspire progress for the betterment of Bangladesh.</p>
+    
+                    <!-- Content Area (now positioned immediately to the right) -->
+                    <div class="content-area wow fadeInRight" data-wow-delay="0.2s" style="flex: 1; margin-left: 20px;">
+                        <div id="mission" class="about-item-content bg-white rounded p-5 h-100 section active">
+                            <h4 class="text-primary text-center">Mission</h4>
+                            <p>The BNRC is committed to conducting high-quality research and analysis on national and
+                                international issues, providing strategic insights to the Bangladesh Nationalist Party, and
+                                contributing to the development of policies that promote sustainable growth, social justice,
+                                and national unity. Through intellectual rigor and collaboration, the BNRC aims to empower
+                                leadership and inspire progress for the betterment of Bangladesh.</p>
+                        </div>
+                        <div id="vision" class="about-item-content bg-white rounded p-5 h-100 section">
+                            <h4 class="text-primary text-center">Vision</h4>
+                            <p>To be the leading research institution in Bangladesh, driving evidence-based policymaking and fostering innovation to support the nation's socio-economic progress and uphold democratic values.</p>
+                        </div>
+                        <div id="formation" class="about-item-content bg-white rounded p-5 h-100 section">
+                            <h4 class="text-primary text-center">Formation of BNRC</h4>
+                            <p>
+                                The Bangladesh Nationalist Research Centre (BNRC) is the Research Institution of the Bangladesh Nationalist Party (BNP). Recognizing the need for a premier research wing to provide evidence-based insights and strategic guidance to party leadership, the BNRC was established on March 19, 2016, under the directive (30 March 2016) of former Prime Minister and BNP Chairperson Begum Khaleda Zia, in accordance with the party's amended constitution. The organization formally commenced its activities on April 1, 2016.
+                            </p>
+                            
+                            <!-- Framed Image of Authorization Letter -->
+                            <div style="text-align: center; margin: 30px 0;">
+                                <img src="img/bnrc-letter.jpeg" alt="Authorization Letter by Khaleda Zia text-center" 
+                                     style="border: 4px solid #ccc; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 100%; height: auto;">
+                                <p style="margin-top: 10px; font-style: italic; color: #555;">Authorization letter by Madam Khaleda Zia, March 30, 2016</p>
+                            </div>
+                            
+                            <p>
+                                Since its inception, the BNRC has been at the forefront of conducting comprehensive research and analysis on a wide range of issues, including national and international affairs, as well as internal and external matters concerning the party. Its findings serve as a critical foundation for BNP's policy formulation, reinforcing the party's positions and supporting its initiatives.
+                                The BNP consistently incorporates the BNRC's research-driven insights into its policies and programs, ensuring they are constructive, forward-looking, and aligned with the broader objectives of national socio-economic progress. The BNRC stands as a trusted partner in addressing the nation's challenges and fostering development, embodying a commitment to excellence in its contributions to both the party and the country.
+                            </p>
+                            <p><em>“A dedicated research wing is indispensable for shaping our party's vision and ensuring its enduring progress." — Begum Khaleda Zia, March 19, 2016</em></p>
+                            
+                            
+                        </div>
+                        <div id="functions" class="about-item-content bg-white rounded p-5 h-100 section">
+                            <h4 class="text-primary text-center">Functions OF BNRC</h4>
+                            <p> BNRC plays a vital role in shaping research-driven strategies and providing evidence-based insights to support the Bangladesh Nationalist Party (BNP) in policymaking and governance. As a leading research institution, BNRC focuses on analyzing national and international issues, conducting in-depth studies, and offering strategic guidance that informs BNP's initiatives. The core functions of BNRC include:</p>
+                               <p> • Research & Analysis: Conducting comprehensive studies on political, economic, and social issues.</p>
+                               <p> • Policy Development: Providing strategic recommendations that influence BNP’s policy decisions.</p>
+                               <p> • Publications: Producing research papers, reports, and policy briefs for public discourse and decision-making.</p>
+                               <p> • Collaboration: Partnering with experts, academic institutions, and research organizations for high-quality studies.</p>
+                               <p> • Leadership Support: Equipping BNP leadership with data-driven strategies to tackle national challenges.</p>
+                               <p> • Knowledge Sharing: Organizing workshops, seminars, and conferences to disseminate findings.</p>
+                               <p> • Archiving: Maintaining a secure repository of research materials, drafts, and publications for future reference.</p>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    </div>
+    
     <!-- About End -->
 
 
