@@ -339,7 +339,7 @@ nav a {
 }
 
 .breadcrumb {
-  background: #007c80;
+  /* background: #007c80; */ /************ Tareq! Why did ypu do this? ***********************/
   color: white;
   padding: 10px 20px;
 }
