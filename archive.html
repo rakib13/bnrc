@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Archive Search</title>
+    <style>
+        /* Basic Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #7f8c8d;
+            --accent: #3498db;
+            --light: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+
+        /* Filters Sidebar */
+        .filters {
+            background: var(--light);
+            padding: 1rem;
+            border-right: 1px solid #ddd;
+        }
+
+        .filter-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-group h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        select,
+        input[type="text"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            border: 1px solid var(--secondary);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem;
+        }
+
+        /* Search Bar */
+        #searchBox {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid var(--accent);
+        }
+
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .item-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .item-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Filters Sidebar -->
+    <div class="filters">
+        <div class="filter-group">
+            <h3>Search</h3>
+            <input type="text" id="searchBox" placeholder="Keyword...">
+        </div>
+
+        <div class="filter-group">
+            <h3>Year</h3>
+            <input type="number" id="yearFrom" placeholder="From (YYYY)">
+            <input type="number" id="yearTo" placeholder="To (YYYY)">
+        </div>
+
+        <div class="filter-group">
+            <h3>Author</h3>
+            <select id="authorFilter">
+                <option value="">All Authors</option>
+                <option>John Smith</option>
+                <option>Maria Garcia</option>
+                <option>Ahmed Khan</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <h3>Topic</h3>
+            <select id="topicFilter">
+                <option value="">All Topics</option>
+                <option>History</option>
+                <option>Science</option>
+                <option>Literature</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <h3>Publication Type</h3>
+            <select id="typeFilter">
+                <option value="">All Types</option>
+                <option>Book</option>
+                <option>Journal</option>
+                <option>Manuscript</option>
+                <option>Newspaper</option>
+            </select>
+        </div>
+
+        <button onclick="clearFilters()">Clear Filters</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="results-grid" id="resultsContainer">
+            <!-- Items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Sample Data
+        const archiveItems = [
+            {
+                title: "Ancient Civilizations",
+                author: "John Smith",
+                year: 2015,
+                topic: "History",
+                type: "Book",
+                description: "A comprehensive study of early human societies."
+            },
+            {
+                title: "Quantum Physics Advances",
+                author: "Maria Garcia",
+                year: 2020,
+                topic: "Science",
+                type: "Journal",
+                description: "Recent discoveries in quantum mechanics."
+            },
+            // Add more items...
+        ];
+
+        // Initialize with all items
+        function renderItems(items) {
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = items.map(item => `
+        <div class="item-card">
+            <h3>${item.title}</h3>
+            <p>Author: ${item.author}</p>
+            <p>Year: ${item.year}</p>
+            <p>Topic: ${item.topic}</p>
+            <p>Type: ${item.type}</p>
+            <p>${item.description}</p>
+        </div>
+    `).join('');
+        }
+
+        // Filter Functionality
+        function filterItems() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const yearFrom = parseInt(document.getElementById('yearFrom').value) || 0;
+            const yearTo = parseInt(document.getElementById('yearTo').value) || 3000;
+            const author = document.getElementById('authorFilter').value;
+            const topic = document.getElementById('topicFilter').value;
+            const type = document.getElementById('typeFilter').value;
+
+            const filtered = archiveItems.filter(item =>
+                (item.title.toLowerCase().includes(searchTerm) ||
+                    item.description.toLowerCase().includes(searchTerm)) &&
+                item.year >= yearFrom &&
+                item.year <= yearTo &&
+                (author === "" || item.author === author) &&
+                (topic === "" || item.topic === topic) &&
+                (type === "" || item.type === type)
+            );
+
+            renderItems(filtered);
+        }
+
+        // Clear Filters
+        function clearFilters() {
+            document.getElementById('searchBox').value = "";
+            document.getElementById('yearFrom').value = "";
+            document.getElementById('yearTo').value = "";
+            document.getElementById('authorFilter').value = "";
+            document.getElementById('topicFilter').value = "";
+            document.getElementById('typeFilter').value = "";
+            renderItems(archiveItems);
+        }
+
+        // Event Listeners
+        document.querySelectorAll('.filters input, .filters select').forEach(element => {
+            element.addEventListener('input', filterItems);
+        });
+
+        // Initial Render
+        renderItems(archiveItems);
+    </script>
+</body>
+
+</html>

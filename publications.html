@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BNRC - Bangladesh Nationalist Research Centre</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+        <div class="container">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <div class="border-end border-danger pe-3">
+                            <a href="./contact.html#location-map" class="text-muted small"><i
+                                    class="fas fa-map-marker-alt text-primary me-2"></i>Find Location</a>
+                        </div>
+                        <div class="ps-3">
+                            <a href="mailto:example@gmail.com" class="text-muted small"><i
+                                    class="fas fa-envelope text-primary me-2"></i>bnrc.org@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex justify-content-end">
+                        <div class="d-flex border-end border-primary pe-3">
+                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <!-- <div class="px-2">
+                            <a href="#"><small><i class="fas fa-file-archive text-primary me-2"></i>Archive</small></a>
+                        </div> -->
+                        <!-- <div class="dropdown ms-3">
+                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i
+                                        class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
+                            <div class="dropdown-menu rounded">
+                                <a href="#" class="dropdown-item">English</a>
+                                <a href="#" class="dropdown-item">Bangla</a>
+                                <a href="#" class="dropdown-item">French</a>
+                                <a href="#" class="dropdown-item">Spanish</a>
+                                <a href="#" class="dropdown-item">Arabic</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="#" class="navbar-brand d-flex align-items-center p-0">
+                    <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 50px; width: auto;">
+                    <span class="d-flex flex-column">
+                        <small class="brand-maintext" style="font-size: 20px;">Bangladesh Nationalist</small>
+                        <small class="brand-maintext" style="font-size: 20px;">Research Centre</small>
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-0 mx-lg-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About BNRC</a>
+                        <!-- <a href="gallery.html" class="nav-item nav-link">Gallery</a> -->
+                        <a href="./leadershiplegacy.html" class="nav-item nav-link">Leadership Legacy</a>
+                        <a href="publications.html" class="nav-item nav-link active">Research & Publications</a>
+
+                        <a href="./publications.html" class="nav-item nav-link">RTD</a>
+                        <a href="./archive.html" class="nav-item nav-link">Archive</a>
+                        <a href="./contact.html" class="nav-item nav-link">Share your Thaught</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">BNP & Development</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="agriculture&economics.html" class="dropdown-item">Agriculture & Economics</a>
+                                <a href="constitution&law.html" class="dropdown-item">Constitution & Law</a>
+                                <a href="education&sports.html" class="dropdown-item">Education & Sports</a>
+                                <a href="defense&foreignAffairs.html" class="dropdown-item">Defense & Foreign
+                                    Affairs</a>
+                                <a href="health&development.html" class="dropdown-item">Health & Development</a>
+                            </div>
+                        </div> -->
+                        <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+                        <!-- <div class="nav-btn px-3">
+                            <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0"
+                                data-bs-toggle="modal" data-bs-target="#searchModal"><i
+                                    class="fas fa-search"></i></button>
+                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Get a
+                                Quote</a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                    <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
+                        data-wow-delay=".9s">
+                        <i class="fa fa-phone-alt fa-2x"></i>
+                        <div class="position-absolute" style="top: 7px; right: 12px;">
+                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                        </div>
+                    </a>
+                    <div class="d-flex flex-column ms-3">
+                        <span>Call to Our Experts</span>
+                        <a href="tel:+88 09613241978"><span class="text-dark">Free: +88 09613241978</span></a>
+                    </div>
+                </div> -->
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center bg-primary">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords"
+                            aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i
+                                class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-danger display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Publications</h4>
+            <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active text-primary">Publications</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <p class="mb-0"> At the Political Research Center, we are dedicated to providing rigorous, non-partisan
+                    research that
+                    informs public debate and drives meaningful policy change. Our mission is to bridge the gap between
+                    academic research, policymakers, and the public to foster a more informed and engaged society.
+                </p>
+                <br>
+                <h4 class="text-primary">Our Publications</h4>
+                <!-- <h1 class="display-4 mb-4">News And Updates</h1> -->
+
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/points2.JPG" alt="Sample Image 2">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/d447cd3cc6.html.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Which allows you to pay down insurance bills</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+
+                        </div> -->
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/points3.JPG" alt="Sample Image 3">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/4454557727.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                </div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments
+                                </div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero
+                                soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/English Book.JPG" alt="Sample Image 3">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/3f84f1b121.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                </div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments
+                                </div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero
+                                soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- another row count  -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/Bangla Book.jpg" alt="Sample Image 3">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/46cb9c96d4.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                </div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments
+                                </div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero
+                                soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/vision bangla_2030.jpg" alt="Sample Image 3">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/8209fa1659.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                </div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments
+                                </div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero
+                                soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/vision_2030.jpg" alt="Sample Image 3">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/0dd9b904ec.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                </div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments
+                                </div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero
+                                soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- another row 3 -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/baksalfrontpage.jpg" alt="Sample Image 3">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/cb54235352.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                </div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments
+                                </div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero
+                                soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/pdf-cover/publications/points1.JPG" alt="Sample Image 3">
+                            <div class="blog-categiry pdf-link py-2 px-4"
+                                data-pdf="https://heyzine.com/flip-book/602a7bc542.html">
+                                <span>View Details</span>
+                            </div>
+                        </div>
+                        <!-- <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                </div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments
+                                </div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero
+                                soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div id="pdfModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe id="pdfIframe" src="" frameborder="0" style="width:100%; height:80vh;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-1 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-3">
+            <div class="row g-5">
+                <div class="col-xl-9">
+                    <div class="mb-2">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item">
+                                    <a href="index.html" class="p-0">
+                                        <!-- <h3 class="text-danger"><i class="fab fa-slack me-3"></i></h3> -->
+                                        <img src="img/logo-bnrc.png" height="120" alt="BNRL Logo">
+                                    </a>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="text-danger mb-2">Bangladesh Nationalist <br> Research Centre
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item">
+                                    <h5 class="text-white mb-2">Useful Links</h5>
+                                    <a href="./about.html"><i class="fas fa-angle-right me-2"></i> About BNRC</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> Gallery</a>
+                                    <a href="./blog.html"><i class="fas fa-angle-right me-2"></i> Research &
+                                        Publications</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> RTD</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> Archive</a>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item">
+                                    <h5 class="text-white mb-2">External Links</h5>
+                                    <div class="row g-3">
+                                        <div class="col-4">
+                                            <div class="footer-instagram">
+                                                <a href="https://www.bnpbd.org/" target="_blank">
+                                                    <img src="./img/img-bnp.png" alt="BNP Logo" width="96px">
+                                                </a>
+                                                <a href="https://roadtodemocracy.com/" target="_blank">
+                                                    <img src="./img/road-to-democracy.png" alt="Democracy Logo"
+                                                        width="96px">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="row g-0">
+                            <div class="col-12">
+                                <div class="row g-4">
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-danger text-white rounded p-2 me-2">
+                                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-white">Address</h5>
+                                                <p class="mb-0">House # 59, Flat # C-3, Road # 1, Block-l, Banani,
+                                                    Dhaka-1213</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-danger text-white rounded p-2 me-2">
+                                                <i class="fas fa-envelope fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-white">Mail Us</h5>
+                                                <p class="mb-0">E-mail: bnrc.org@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-danger text-white rounded p-2 me-2">
+                                                <i class="fa fa-phone-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-white">Telephone</h5>
+                                                <p class="mb-0">Hotline: +88 09613241978</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="footer-item">
+                        <h5 class="text-white mb-3">Newsletter</h5>
+                        <div class="position-relative rounded-pill mb-3">
+                            <input class="form-control rounded-pill w-100 py-2 ps-3 pe-3" type="text"
+                                placeholder="Enter your email">
+                            <button type="button"
+                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-1 mt-1 me-1">SignUp</button>
+                        </div>
+                        <div class="d-flex flex-shrink-0">
+                            <div class="footer-btn d-flex px-2">
+                                <a class="btn btn-md-square rounded-circle me-3"
+                                    href="https://www.facebook.com/bnrc.org"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-md-square rounded-circle me-3" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-md-square rounded-circle me-3" href="#"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-md-square rounded-circle me-0" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-1">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    Copyright &copy 2025;
+                </div>
+                <div class="col-md-2 text-center text-md-start text-body fst-italic">
+                    Designed By : <a class="border-bottom text-danger" href="">BNRC</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
