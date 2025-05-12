@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 (function ($) {
     "use strict";
 
@@ -310,7 +310,7 @@ window.onload = () => {
 
 
 
-=======
+
 (function ($) {
     "use strict";
 
@@ -603,4 +603,3 @@ function toggleSubmenu(id) {
   }
 
 // mission end
->>>>>>> d779bfb355e8d1bd03863054101c286a45a8fe66
