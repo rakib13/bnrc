@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   =>  Template Name    : LifeSure - Life Insurance Website Template
 
   =>  Template Link    : https://htmlcodex.com/life-insurance-website-template
@@ -6,4 +7,14 @@
 
   =>  Template Author  : HTML Codex
 
+=======
+  =>  Template Name    : LifeSure - Life Insurance Website Template
+
+  =>  Template Link    : https://htmlcodex.com/life-insurance-website-template
+
+  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : HTML Codex
+
+>>>>>>> d779bfb355e8d1bd03863054101c286a45a8fe66
   =>  Author Website   : https://htmlcodex.com
