@@ -1,3 +1,4 @@
+
 /* Custom Dropdown Styling */
 
 .about-item-content {
@@ -77,17 +78,17 @@ html {
 
 /* header */
 /* Background overlay behind text */
-.animated-banner {
+/* .animated-banner {
   background: #2b6cb0 !important;
    border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
    max-width: 90%;
-}
+} */
 
 /* Title styling */
 .bnrc-title {
-  color: #800000;
-  font-size: 2rem;
+  color: #2b6cb0;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
