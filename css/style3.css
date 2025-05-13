@@ -44,6 +44,7 @@ html {
   box-shadow: 0 4px 15px rgba(66, 153, 225, 0.15);
 }
 
+
 .custom-dropdown-btn.active {
   background: #2b6cb0 !important;
   color: white !important;
@@ -155,92 +156,24 @@ html {
 
 /* leadership and legacy */
 
-.video-header {
-  position: relative;
-  width: 100%;
-  background-color: #2b6cb0; /* fallback */
-  overflow: hidden;
-}
-
-.video-frame-container {
-  position: relative;
-  width: 100%;
-  height: auto; /* Let content define height */
-  aspect-ratio: 16 / 9; /* Maintain a responsive ratio */
-  overflow: hidden;
-}
-
-.video-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.video-frame-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* .bnrc-title {
-  color: #800000;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.bnrc-tagline {
-  color: #fff;
-  font-size: 1.2rem;
-  animation: fadeInUp 1.5s ease-in-out;
-} */
-
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive text */
-@media (max-width: 768px) {
-  .bnrc-title {
-    font-size: 1.8rem;
-  }
-  .bnrc-tagline {
-    font-size: 1rem;
-  }
-}
+/* Slider Animation */
+    .slider-track {
+        animation: slide 15s infinite ease-in-out;
+    }
+    
+    @keyframes slide {
+        0%, 25% {
+            transform: translateX(0);
+        }
+        33%, 58% {
+            transform: translateX(-100%);
+        }
+        66%, 91% {
+            transform: translateX(-200%);
+        }
+        100% {
+            transform: translateX(-300%);
+        }
+    }
 
 /* leadership and legacy */

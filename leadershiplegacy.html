@@ -35,6 +35,8 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style2.css" rel="stylesheet">
+    <link href="css/style3.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -110,10 +112,40 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav mx-0 mx-lg-auto">
-                            <a href="./index.html" class="nav-item nav-link border-right active">Home</a>
+                            <a href="./index.html" class="nav-item nav-link border-right">Home</a>
                             <a href="./about.html" class="nav-item nav-link">About BNRC</a>
                             <!-- <a href="./gallery.html" class="nav-item nav-link">Gallery</a> -->
-                            <a href="./leadershiplegacy.html" class="nav-item nav-link">Leadership Legacy</a>
+                            <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link active">Leadership Legacy</a> -->
+
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle">Leadership Legacy
+                                    
+                                </a>
+                                <div class="dropdown-menu custom-dropdown-menu">
+                                    <div class="d-flex flex-row flex-wrap gap-2 p-2">
+                                        <button class="custom-dropdown-btn active" onclick="showSection('mission')">
+                                            Leadership Legacy: A Tradition of Excellence
+                                        </button>
+                                        <button class="custom-dropdown-btn" onclick="showSection('vision')">
+                                            Restoring Democracy: Championing People's Voices
+                                        </button>
+                                        <button class="custom-dropdown-btn" onclick="showSection('formation')">
+                                            Economic Advancements: Driving Growth
+                                        </button>
+                                        <button class="custom-dropdown-btn" onclick="showSection('functions')">
+                                            Social Development: Transforming Lives
+                                        </button>
+                                        <button class="custom-dropdown-btn" onclick="showSection('functions')">
+                                            Environmental Vision: Sustainability Today
+                                        </button>
+                                        <button class="custom-dropdown-btn" onclick="showSection('functions')">
+                                            Other sectors: Expanding Horizons
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <a href="./publications.html" class="nav-item nav-link">Research & Publications</a>
                             <a href="./publications.html" class="nav-item nav-link">RTD</a>
                             <a href="./publications.html" class="nav-item nav-link">Archive</a>
@@ -169,15 +201,49 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-danger display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Leadership Legacy</h4>
-            <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active text-primary">Leadership Legacy</li>
-            </ol>
+    <div class="container-fluid position-relative p-0" style="height: 60vh; overflow: hidden;">
+        <!-- Image Slider -->
+        <div id="headerCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel"
+            data-bs-interval="3000">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="img/1.jpg" class="d-block w-100 h-100"
+                        style="object-fit: cover; object-position: top center;" alt="Slide 1">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/2.jpg" class="d-block w-100 h-100"
+                        style="object-fit: cover; object-position: top center;" alt="Slide 2">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/3.jpg" class="d-block w-100 h-100"
+                        style="object-fit: cover; object-position: top center;" alt="Slide 3">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/4.jpg" class="d-block w-100 h-100"
+                        style="object-fit: cover; object-position: top center;" alt="Slide 4">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/5.jpg" class="d-block w-100 h-100"
+                        style="object-fit: cover; object-position: top center;" alt="Slide 5">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/6.jpg" class="d-block w-100 h-100"
+                        style="object-fit: cover; object-position: top center;" alt="Slide 6">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/7.jpg" class="d-block w-100 h-100"
+                        style="object-fit: cover; object-position: top center;" alt="Slide 7">
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay Header Content -->
+        <div class="container text-center py-5 position-absolute top-50 start-50 translate-middle text-white"
+            style="max-width: 900px; z-index: 10;">
+            <!-- Header content can go here -->
         </div>
     </div>
+
     <!-- Header End -->
 
 

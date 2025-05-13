@@ -603,3 +603,39 @@ function toggleSubmenu(id) {
   }
 
 // mission end
+
+// leadership legacy
+
+var myCarousel = new bootstrap.Carousel(document.getElementById('headerCarousel'), {
+  interval: 3000 // change slide every 3 seconds
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.getElementById('legacyDropdown');
+    let timeoutId;
+    
+    dropdown.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+        this.querySelector('.dropdown-menu').style.display = 'block';
+    });
+    
+    dropdown.addEventListener('mouseleave', function() {
+        const menu = this.querySelector('.dropdown-menu');
+        timeoutId = setTimeout(() => {
+            menu.style.display = 'none';
+        }, 300); // 300ms delay before closing
+    });
+    
+    // Keep menu open if mouse moves to it
+    const menu = dropdown.querySelector('.dropdown-menu');
+    menu.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+    });
+    
+    menu.addEventListener('mouseleave', function() {
+        timeoutId = setTimeout(() => {
+            this.style.display = 'none';
+        }, 300);
+    });
+});
+//leaderhop legacy
