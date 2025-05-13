@@ -78,10 +78,10 @@ html {
 /* header */
 /* Background overlay behind text */
 .animated-banner {
-  //background: #2b6cb0 !important;
-  // border-radius: 12px;
-  //box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  // max-width: 90%;
+  background: #2b6cb0 !important;
+   border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+   max-width: 90%;
 }
 
 /* Title styling */
@@ -98,7 +98,7 @@ html {
   margin-bottom: 0rem; /* optional upward shift */
   padding-bottom: 20rem;
   transform: translateY(-8px); /* Shift upward */
-  //position: relative;
+  position: relative;
 
   transform: translateY(-10px); /* Fine-tune positioning */
   font-size: 1.1rem;
