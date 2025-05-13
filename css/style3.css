@@ -1,4 +1,3 @@
-
 /* Custom Dropdown Styling */
 
 .about-item-content {
@@ -43,7 +42,6 @@ html {
   border-color: #2b6cb0;
   box-shadow: 0 4px 15px rgba(66, 153, 225, 0.15);
 }
-
 
 .custom-dropdown-btn.active {
   background: #2b6cb0 !important;
@@ -157,23 +155,26 @@ html {
 /* leadership and legacy */
 
 /* Slider Animation */
-    .slider-track {
-        animation: slide 15s infinite ease-in-out;
-    }
-    
-    @keyframes slide {
-        0%, 25% {
-            transform: translateX(0);
-        }
-        33%, 58% {
-            transform: translateX(-100%);
-        }
-        66%, 91% {
-            transform: translateX(-200%);
-        }
-        100% {
-            transform: translateX(-300%);
-        }
-    }
+.slider-track {
+  animation: slide 15s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0%,
+  25% {
+    transform: translateX(0);
+  }
+  33%,
+  58% {
+    transform: translateX(-100%);
+  }
+  66%,
+  91% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
 
 /* leadership and legacy */
