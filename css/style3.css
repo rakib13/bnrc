@@ -178,27 +178,71 @@ html {
 }
 
 /* book */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* 3–5 items per row depending on screen */
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
 .pdf-link {
-    background-color: #dc3545;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-size: 14px;
-    text-decoration: none;
-    z-index: 2;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
-.service-img {
-    position: relative;
-    overflow: hidden;
-}
-.service-img img {
-    width: 100%;
-    height: auto;
-    display: block;
+.pdf-gallery .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
+/* default state: hide all galleries */
+.pdf-gallery {
+  display: none;
+}
 
+/* when JS adds the .active-section class, it becomes visible */
+.pdf-gallery.active-section {
+  display: block;
+}
+
+/* button base styles */
+.custom-dropdown-btn {
+  padding: 8px 16px;
+  margin-right: 8px;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+/* “active” button state */
+.custom-dropdown-btn.active {
+  background: #007bff;
+  color: white;
+}
 /* book */
-
 
 /* leadership and legacy */
