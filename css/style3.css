@@ -177,4 +177,28 @@ html {
   }
 }
 
+/* book */
+.pdf-link {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    z-index: 2;
+}
+.service-img {
+    position: relative;
+    overflow: hidden;
+}
+.service-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* book */
+
+
 /* leadership and legacy */

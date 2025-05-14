@@ -119,7 +119,7 @@
 
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle">Leadership Legacy
-                                    
+
                                 </a>
                                 <div class="dropdown-menu custom-dropdown-menu">
                                     <div class="d-flex flex-row flex-wrap gap-2 p-2">
@@ -254,21 +254,20 @@
                 <h4 class="text-primary">Leadership Legacy</h4>
             </div>
             <div class="row g-4 justify-content-center" id="video-container">
-                <!-- <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-item video-thumbnail" data-video-id="UKhd0TsfMYo">
-                        <div class="service-img">
-                            <img src="https://img.youtube.com/vi/UKhd0TsfMYo/maxresdefault.jpg" alt="Video thumbnail"
-                                class="thumbnail-img">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="service-icon p-3">
-                            <p>Projonmo Theke Projonmer Jatra</p>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img position-relative">
+                            <img src="img/pdf-cover/agriculture&economics/agri-1.jpg" alt="Sample Image" class="img-fluid">
+                
+                            <!-- Button to trigger modal -->
+                            <button class="btn btn-primary position-absolute" style="bottom: 10px; left: 10px;" data-bs-toggle="modal"
+                                data-bs-target="#pdfModal" data-pdf-url="https://heyzine.com/flip-book/d95efb5d9d.html">
+                                View Details
+                            </button>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
 
                     <div class="service-item video-thumbnail" data-video-id="UKhd0TsfMYo">
@@ -315,24 +314,8 @@
                         </div>
                     </div>
 
-                </div> -->
+                </div>
                 <!-- 2nd row -->
-                <!-- <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s" data-video-id="UKhd0TsfMYo">
-
-                    <div class="service-item video-thumbnail">
-                        <div class="service-img">
-                            <img src="https://img.youtube.com/vi/UKhd0TsfMYo/maxresdefault.jpg" alt="Video thumbnail"
-                                class="thumbnail-img">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="service-icon p-3">
-                            <p>Projonmo Theke Projonmer Jatra</p>
-                        </div>
-                    </div>
-
-                </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s" data-video-id="UKhd0TsfMYo">
 
                     <div class="service-item video-thumbnail">
@@ -380,11 +363,42 @@
                         </div>
                     </div>
 
-                </div> -->
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s" data-video-id="UKhd0TsfMYo">
+
+                    <div class="service-item video-thumbnail">
+                        <div class="service-img">
+                            <img src="https://img.youtube.com/vi/UKhd0TsfMYo/maxresdefault.jpg" alt="Video thumbnail"
+                                class="thumbnail-img">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="service-icon p-3">
+                            <p>Projonmo Theke Projonmer Jatra</p>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
                     <a class="btn btn-primary rounded-pill py-3 px-5" href="#" id="loadMoreBtn">More Videos</a>
                 </div>
             </div>
+
+            <!-- PDF Modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">PDF Preview</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0" style="height: 80vh;">
+        <iframe id="pdfFrame" src="" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
 
     </div>

@@ -638,4 +638,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     });
 });
+
+// book
+
+const pdfModal = document.getElementById('pdfModal');
+  const pdfFrame = document.getElementById('pdfFrame');
+
+  pdfModal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    const pdfUrl = button.getAttribute('data-pdf-url');
+    pdfFrame.src = pdfUrl;
+  });
+
+  pdfModal.addEventListener('hidden.bs.modal', function () {
+    pdfFrame.src = ''; // clear on close
+  });
+//book
 //leaderhop legacy
