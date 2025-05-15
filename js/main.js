@@ -589,18 +589,18 @@ function showSection(sectionId) {
 }
 
 // ziaur rahman
-function toggleSubmenu(id) {
-    const submenu = document.getElementById(id);
-    submenu.classList.toggle('d-none');
-  }
+// function toggleSubmenu(id) {
+//     const submenu = document.getElementById(id);
+//     submenu.classList.toggle('d-none');
+//   }
 
-  function showSection(id) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => section.classList.remove('active'));
+//   function showSection(id) {
+//     const sections = document.querySelectorAll('.section');
+//     sections.forEach(section => section.classList.remove('active'));
 
-    const target = document.getElementById(id);
-    if (target) target.classList.add('active');
-  }
+//     const target = document.getElementById(id);
+//     if (target) target.classList.add('active');
+//   }
 
 // mission end
 
@@ -641,61 +641,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // book
 
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('pdf-modal');
-    const pdfFrame = document.getElementById('pdf-frame');
-    const closeModal = document.getElementById('close-modal');
-
-    document.querySelectorAll('.pdf-link').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default link behavior
-            const pdfSrc = this.getAttribute('data-pdf'); // Get PDF file path
-            pdfFrame.src = pdfSrc; // Set iframe source
-            modal.style.display = 'flex'; // Show modal
-        });
-    });
-
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none'; // Hide modal
-        pdfFrame.src = ''; // Clear iframe source
-    });
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            pdfFrame.src = ''; // Clear iframe source
-        }
-    });
-});
-
-
  // Show exactly one section, and mark the clicked button active
-  function showSection(sectionId, btn) {
-    // hide all sections
-    document.querySelectorAll('.pdf-gallery')
-      .forEach(sec => sec.classList.remove('active-section'));
+//   function showSection(sectionId, btn) {
+//     // hide all sections
+//     document.querySelectorAll('.pdf-gallery')
+//       .forEach(sec => sec.classList.remove('active-section'));
     
-    // show the one we want
-    const toShow = document.getElementById(sectionId);
-    if (toShow) toShow.classList.add('active-section');
+//     // show the one we want
+//     const toShow = document.getElementById(sectionId);
+//     if (toShow) toShow.classList.add('active-section');
     
-    // remove .active from all buttons
-    document.querySelectorAll('.custom-dropdown-btn')
-      .forEach(b => b.classList.remove('active'));
+//     // remove .active from all buttons
+//     document.querySelectorAll('.custom-dropdown-btn')
+//       .forEach(b => b.classList.remove('active'));
     
-    // mark this one active
-    btn.classList.add('active');
-  }
+//     // mark this one active
+//     btn.classList.add('active');
+//   }
   
-  // on page load, show the initially-active one:
-  document.addEventListener('DOMContentLoaded', () => {
-    // find the button that already has .active
-    const first = document.querySelector('.custom-dropdown-btn.active');
-    if (first) {
-      // derive its section-id from its onclick, or data-attribute
-      // here we passed 'LeadershipLegacy' explicitly
-      first.click();
-    }
-  });
+//   // on page load, show the initially-active one:
+//   document.addEventListener('DOMContentLoaded', () => {
+//     // find the button that already has .active
+//     const first = document.querySelector('.custom-dropdown-btn.active');
+//     if (first) {
+//       // derive its section-id from its onclick, or data-attribute
+//       // here we passed 'LeadershipLegacy' explicitly
+//       first.click();
+//     }
+//   });
 //book
 //leaderhop legacy
