@@ -239,7 +239,7 @@
 .navbar-light .navbar-nav .nav-item.active .nav-link {
   color: var(--bs-primary);
   border-bottom: 5px solid var(--bs-primary);
-/*   
+  /*   
   content: '';
   display: block;
   margin: auto;
@@ -257,7 +257,21 @@
   background: blue;
 } */
 
+@media (min-width: 990px) {
+  #top-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  #top-logo {
+    display: block;
+  }
+}
+
 @media (max-width: 991px) {
+
+
   .navbar {
     padding: 20px 0;
   }
