@@ -32,6 +32,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style2.css" rel="stylesheet">
+    <link href="css/style3.css" rel="stylesheet">
 </head>
 
 <body>
@@ -194,6 +195,64 @@
     <!-- Blog Start -->
     <div class="container-fluid blog py-5">
         <div class="container py-5">
+            <!-- Blog Header -->
+
+            <!-- START archive filter (horizontal) -->
+            <div class="archive-filters shadow-box">
+                <div class="filter-item">
+                    <i class="fas fa-search icon"></i>
+                    <input type="text" id="searchBox" placeholder="Keyword...">
+                </div>
+
+                <div class="filter-item">
+                    <i class="fas fa-calendar-minus icon"></i>
+                    <input type="number" id="yearFrom" placeholder="From (YYYY)">
+                </div>
+
+                <div class="filter-item">
+                    <i class="fas fa-calendar-plus icon"></i>
+                    <input type="number" id="yearTo" placeholder="To (YYYY)">
+                </div>
+
+                <div class="filter-item">
+                    <i class="fas fa-user icon"></i>
+                    <select id="authorFilter">
+                        <option value="">All Authors</option>
+                        <option>John Smith</option>
+                        <option>Maria Garcia</option>
+                        <option>Ahmed Khan</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <i class="fas fa-book icon"></i>
+                    <select id="topicFilter">
+                        <option value="">All Topics</option>
+                        <option>History</option>
+                        <option>Science</option>
+                        <option>Literature</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <i class="fas fa-file-alt icon"></i>
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option>Book</option>
+                        <option>Journal</option>
+                        <option>Manuscript</option>
+                        <option>Newspaper</option>
+                    </select>
+                </div>
+
+                <button onclick="clearFilters()">
+                    <i class="fas fa-eraser"></i> Clear
+                </button>
+            </div>
+
+
+            <!-- filter end -->
+
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <p class="mb-0"> At the Political Research Center, we are dedicated to providing rigorous, non-partisan
                     research that

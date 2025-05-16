@@ -257,8 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-// mission start
+/*..................... About start btn click start BNRC..............*/
 
 // Show/hide sections
 function showSection(sectionId) {
@@ -292,7 +291,7 @@ function toggleSubmenu(id) {
     });
 }
 
-
+/*..................... About start btn click start BNRC............END..*/
 
 // Initialize first section
 window.onload = () => {
@@ -572,21 +571,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // mission start
 
-function showSection(sectionId) {
-    // Hide all sections
-    document.querySelectorAll('.about-item-content').forEach(section => {
-        section.classList.remove('active');
-    });
+// function showSection(sectionId) {
+//     // Hide all sections
+//     document.querySelectorAll('.about-item-content').forEach(section => {
+//         section.classList.remove('active');
+//     });
     
-    // Show the selected section
-    document.getElementById(sectionId).classList.add('active');
+//     // Show the selected section
+//     document.getElementById(sectionId).classList.add('active');
     
-    // Update active button in sidebar
-    document.querySelectorAll('.sidebar button').forEach(button => {
-        button.classList.remove('active');
-    });
-    event.target.classList.add('active');
-}
+//     // Update active button in sidebar
+//     document.querySelectorAll('.sidebar button').forEach(button => {
+//         button.classList.remove('active');
+//     });
+//     event.target.classList.add('active');
+// }
 
 // ziaur rahman
 // function toggleSubmenu(id) {
@@ -604,70 +603,75 @@ function showSection(sectionId) {
 
 // mission end
 
-// leadership legacy
+
+
+/*......... leadership button click and pdf handling start legacy ...........start............*/
 
 var myCarousel = new bootstrap.Carousel(document.getElementById('headerCarousel'), {
   interval: 3000 // change slide every 3 seconds
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdown = document.getElementById('legacyDropdown');
-    let timeoutId;
-    
-    dropdown.addEventListener('mouseenter', function() {
-        clearTimeout(timeoutId);
-        this.querySelector('.dropdown-menu').style.display = 'block';
+// PDF Modal Handling
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('pdf-modal');
+    const frame = document.getElementById('pdf-frame');
+    const closeBtn = document.getElementById('close-modal');
+
+    // 1) Wire up every "View Details" link
+    document.querySelectorAll('.pdf-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const url = link.dataset.pdf;
+        frame.src = url;
+        modal.style.display = 'flex';          // show it
+      });
     });
-    
-    dropdown.addEventListener('mouseleave', function() {
-        const menu = this.querySelector('.dropdown-menu');
-        timeoutId = setTimeout(() => {
-            menu.style.display = 'none';
-        }, 300); // 300ms delay before closing
+
+    // 2) Close when the X is clicked
+    closeBtn.addEventListener('click', () => {
+      frame.src = '';                          // clear it
+      modal.style.display = 'none';
     });
-    
-    // Keep menu open if mouse moves to it
-    const menu = dropdown.querySelector('.dropdown-menu');
-    menu.addEventListener('mouseenter', function() {
-        clearTimeout(timeoutId);
+
+    // 3) Close if you click outside the content
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        frame.src = '';
+        modal.style.display = 'none';
+      }
     });
-    
-    menu.addEventListener('mouseleave', function() {
-        timeoutId = setTimeout(() => {
-            this.style.display = 'none';
-        }, 300);
-    });
-});
+  });
 
 // book
 
  // Show exactly one section, and mark the clicked button active
-//   function showSection(sectionId, btn) {
-//     // hide all sections
-//     document.querySelectorAll('.pdf-gallery')
-//       .forEach(sec => sec.classList.remove('active-section'));
+  function showLegacySection(sectionId, btn) {
+    // hide all sections
+    document.querySelectorAll('.pdf-gallery')
+      .forEach(sec => sec.classList.remove('active-section'));
     
-//     // show the one we want
-//     const toShow = document.getElementById(sectionId);
-//     if (toShow) toShow.classList.add('active-section');
+    // show the one we want
+    const toShow = document.getElementById(sectionId);
+    if (toShow) toShow.classList.add('active-section');
     
-//     // remove .active from all buttons
-//     document.querySelectorAll('.custom-dropdown-btn')
-//       .forEach(b => b.classList.remove('active'));
+    // remove .active from all buttons
+    document.querySelectorAll('.custom-dropdown-btn')
+      .forEach(b => b.classList.remove('active'));
     
-//     // mark this one active
-//     btn.classList.add('active');
-//   }
+    // mark this one active
+    btn.classList.add('active');
+  }
   
-//   // on page load, show the initially-active one:
-//   document.addEventListener('DOMContentLoaded', () => {
-//     // find the button that already has .active
-//     const first = document.querySelector('.custom-dropdown-btn.active');
-//     if (first) {
-//       // derive its section-id from its onclick, or data-attribute
-//       // here we passed 'LeadershipLegacy' explicitly
-//       first.click();
-//     }
-//   });
+  // on page load, show the initially-active one:
+  document.addEventListener('DOMContentLoaded', () => {
+    // find the button that already has .active
+    const first = document.querySelector('.custom-dropdown-btn.active');
+    if (first) {
+      // derive its section-id from its onclick, or data-attribute
+      // here we passed 'LeadershipLegacy' explicitly
+      first.click();
+    }
+  });
 //book
-//leaderhop legacy
+
+/*......... leadership button click and pdf handling start legacy ...........END............*/
