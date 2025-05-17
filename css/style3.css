@@ -182,7 +182,7 @@ html {
 }
 
 /* mission end */
-/* leadership and legacy */
+/* ......................leadership and legacy................................ */
 
 /* Slider Animation */
 .slider-track {
@@ -304,7 +304,77 @@ html {
   cursor: pointer;
   z-index: 10;
 }
+
+.custom-dropdown-btn {
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.custom-dropdown-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-dropdown-btn.active {
+  border-color: #007bff;
+  background-color: #e9f3ff;
+  color: #007bff;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  transform: scale(1.03);
+}
+
+.pdf-gallery {
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: block; /* make sure it's visible */
+}
+
+.pdf-gallery.active-highlight {
+  border: 2px solid #007bff;
+  background-color: #f0f8ff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
 /* book */
+
+/* Make buttons full width on small screens */
+@media (max-width: 576px) {
+  .custom-dropdown-btn {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .dropdown-menu.custom-dropdown-menu {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .pdf-gallery {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .pdf-gallery h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+/* Optional: Add a little spacing around sections */
+.pdf-gallery {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background: #fff;
+}
 
 /* leadership and legacy */
 

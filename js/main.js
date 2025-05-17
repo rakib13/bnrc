@@ -645,33 +645,54 @@ document.addEventListener('DOMContentLoaded', () => {
 // book
 
  // Show exactly one section, and mark the clicked button active
-  function showLegacySection(sectionId, btn) {
-    // hide all sections
-    document.querySelectorAll('.pdf-gallery')
-      .forEach(sec => sec.classList.remove('active-section'));
+//   function showLegacySection(sectionId, btn) {
+//     // hide all sections
+//     document.querySelectorAll('.pdf-gallery')
+//       .forEach(sec => sec.classList.remove('active-section'));
     
-    // show the one we want
-    const toShow = document.getElementById(sectionId);
-    if (toShow) toShow.classList.add('active-section');
+//     // show the one we want
+//     const toShow = document.getElementById(sectionId);
+//     if (toShow) toShow.classList.add('active-section');
     
-    // remove .active from all buttons
-    document.querySelectorAll('.custom-dropdown-btn')
-      .forEach(b => b.classList.remove('active'));
+//     // remove .active from all buttons
+//     document.querySelectorAll('.custom-dropdown-btn')
+//       .forEach(b => b.classList.remove('active'));
     
-    // mark this one active
-    btn.classList.add('active');
-  }
+//     // mark this one active
+//     btn.classList.add('active');
+//   }
   
-  // on page load, show the initially-active one:
-  document.addEventListener('DOMContentLoaded', () => {
-    // find the button that already has .active
-    const first = document.querySelector('.custom-dropdown-btn.active');
-    if (first) {
-      // derive its section-id from its onclick, or data-attribute
-      // here we passed 'LeadershipLegacy' explicitly
-      first.click();
-    }
+//   // on page load, show the initially-active one:
+//   document.addEventListener('DOMContentLoaded', () => {
+//     // find the button that already has .active
+//     const first = document.querySelector('.custom-dropdown-btn.active');
+//     if (first) {
+//       // derive its section-id from its onclick, or data-attribute
+//       // here we passed 'LeadershipLegacy' explicitly
+//       first.click();
+//     }
+//   });
+
+function highlightLegacySection(event) {
+  const targetId = event.currentTarget.getAttribute('data-target');
+  const targetSection = document.getElementById(targetId);
+
+  // Highlight only the clicked section
+  document.querySelectorAll('.pdf-gallery').forEach(section => {
+    section.classList.remove('active-highlight');
   });
+
+  if (targetSection) {
+    targetSection.classList.add('active-highlight');
+    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Update active button styles
+  document.querySelectorAll('.custom-dropdown-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.currentTarget.classList.add('active');
+}
 //book
 
 /*......... leadership button click and pdf handling start legacy ...........END............*/

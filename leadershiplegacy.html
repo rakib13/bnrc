@@ -120,39 +120,34 @@
                             <!-- <a href="./gallery.html" class="nav-item nav-link">Gallery</a> -->
                             <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link active">Leadership Legacy</a> -->
 
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle">Leadership Legacy
-
-                                </a>
-                                <div class="dropdown-menu custom-dropdown-menu">
-                                    <div class="d-flex flex-row flex-wrap gap-2 p-2">
-                                        <button class="custom-dropdown-btn active"
-                                            onclick="showLegacySection('LeadershipLegacy')">
-                                            Leadership Legacy: A Tradition of Excellence
-                                        </button>
-                                        <button class="custom-dropdown-btn"
-                                            onclick="showLegacySection('restoringdemocracy')">
-                                            Restoring Democracy: Championing People's Voices
-                                        </button>
-                                        <button class="custom-dropdown-btn"
-                                            onclick="showLegacySection('economicadvancements')">
-                                            Economic Advancements: Driving Growth
-                                        </button>
-                                        <button class="custom-dropdown-btn"
-                                            onclick="showLegacySection('socialdevelopment')">
-                                            Social Development: Transforming Lives
-                                        </button>
-                                        <button class="custom-dropdown-btn"
-                                            onclick="showLegacySection('environmental')">
-                                            Environmental Vision: Sustainability Today
-                                        </button>
-                                        <button class="custom-dropdown-btn"
-                                            onclick="showLegacySection(' othersectors')">
-                                            Other sectors: Expanding Horizons
-                                        </button>
-                                    </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Leadership Legacy</a>
+                            <div class="dropdown-menu custom-dropdown-menu">
+                                <div class="d-flex flex-row flex-wrap gap-2 p-2">
+                                    <button class="custom-dropdown-btn" data-target="LeadershipLegacy" onclick="highlightLegacySection(event)">
+                                        Leadership Legacy
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="restoringdemocracy"
+                                        onclick="highlightLegacySection(event)">
+                                        Restoring Democracy
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="economicadvancements"
+                                        onclick="highlightLegacySection(event)">
+                                        Economic Advancements
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="socialdevelopment" onclick="highlightLegacySection(event)">
+                                        Social Development
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="environmental" onclick="highlightLegacySection(event)">
+                                        Environmental Vision
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="othersectors" onclick="highlightLegacySection(event)">
+                                        Other Sectors
+                                    </button>
                                 </div>
                             </div>
+                        </div>
+
 
 
                             <a href="./publications.html" class="nav-item nav-link">Research & Publications</a>
@@ -361,6 +356,67 @@
             <!-- socialdevelopment.............. -->
             <section id="socialdevelopment" class="pdf-gallery">
                 <h2 class="h2 text-center mb-4">Social Development</h2>
+                <div class="grid-container">
+
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-1.jpg" alt="Sample Image 1">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/5c31d50952.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-2.jpg" alt="Sample Image 1">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/357afbfc22.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-3.jpg" alt="Sample Image 2">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/ef994aeba8.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-4.jpg" alt="Sample Image 3">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/ab830ed3e0.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+            <!-- Environmental vision................ -->
+            <section id="environmental" class="pdf-gallery">
+                <h2 class="h2 text-center mb-4">Social Development</h2>
+                <div class="grid-container">
+
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-1.jpg" alt="Sample Image 1">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/5c31d50952.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-2.jpg" alt="Sample Image 1">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/357afbfc22.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-3.jpg" alt="Sample Image 2">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/ef994aeba8.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./img/pdf-cover/health&development/health-4.jpg" alt="Sample Image 3">
+                        <a href="#" data-pdf="https://heyzine.com/flip-book/ab830ed3e0.html" class="pdf-link">View
+                            Details</a>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+            <section id="othersectors" class="pdf-gallery">
+                <h2 class="h2 text-center mb-4">Other Sectors</h2>
                 <div class="grid-container">
 
                     <div class="grid-item">
