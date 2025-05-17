@@ -181,7 +181,12 @@
 }
 
 /*** Topbar Start ***/
-.topbar .dropdown-toggle::after {
+.topbar{
+  background-color: #00629e;
+}
+
+/* ***** UNUSED CODE -********
+/* .topbar .dropdown-toggle::after {
   border: none;
   content: "\f107";
   font-family: "Font Awesome 5 Free";
@@ -204,7 +209,7 @@
   border: 0;
   transition: 0.5s;
   opacity: 1;
-}
+} */
 
 /*** Topbar End ***/
 
