@@ -689,6 +689,17 @@
 /*** FAQs End ***/
 
 /*** Blog Start ***/
+.blog h4 {
+  color: #4a154b;
+  /* Dark purple */
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid #800000;
+  /* Gold underline */
+  padding-bottom: 8px;
+}
+
 .blog .blog-item {
   border-radius: 10px;
   transition: 0.5s;
@@ -760,9 +771,22 @@
   color: var(--bs-primary);
 }
 
+
 /*** Blog End ***/
 
 /*** Team Start ***/
+
+.team h4 {
+  color: #4a154b;
+  /* Dark purple */
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid #800000;
+  /* Gold underline */
+  padding-bottom: 8px;
+}
+
 .team .team-item .team-img {
   position: relative;
   overflow: hidden;
