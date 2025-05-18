@@ -30,6 +30,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style2.css" rel="stylesheet"> -->
+    <link href="css/style3.css" rel="stylesheet">
 </head>
 
 <body>
@@ -115,10 +117,109 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-0 mx-lg-auto">
-                        <a href="./index.html" class="nav-item nav-link border-right"><strong>Home</strong></a>
-                        <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a>
-                        <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership
-                                Legacy</strong></a>
+                        <a href="./index.html" class="nav-item nav-link border-right active"><strong>Home</strong></a>
+                        <!-- <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a> -->
+                        <!-- about navbar start -->
+                        <div class="nav-item dropdown">
+                            <a href="./about.html" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">About BNRC</span>
+                            </a>
+                            <div class="dropdown-menu custom-dropdown-menu">
+                                <div class="d-flex flex-row flex-wrap gap-2">
+                                    <!-- Main Buttons -->
+                                    <button class="custom-dropdown-btn active" onclick="showSection('mission')">
+                                        Mission
+                                    </button>
+
+                                    <button class="custom-dropdown-btn" onclick="showSection('vision')">
+                                        Vision
+                                    </button>
+
+                                    <button class="custom-dropdown-btn" onclick="showSection('formation')">
+                                        Formation of BNRC
+                                    </button>
+
+                                    <button class="custom-dropdown-btn" onclick="showSection('functions')">
+                                        Functions of BNRC
+                                    </button>
+
+
+                                    <!-- Leadership & Governance -->
+                                    <div class="position-relative">
+                                        <button class="custom-dropdown-btn" onclick="toggleSubmenu('lg-submenu')">
+                                            Leadership & Governance
+                                        </button>
+                                        <div id="lg-submenu" class="submenu-column d-none">
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('leaders')">
+                                                Our Supreme Leaders
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Chairperson')">
+                                                Chairperson Begum Khaleda Zia
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Acting Chairperson')">
+                                                Acting Chairperson Tarique Rahman
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Board of Directors -->
+                                    <div class="position-relative">
+                                        <button class="custom-dropdown-btn" onclick="toggleSubmenu('bd-submenu')">
+                                            Board of Directors
+                                        </button>
+                                        <div id="bd-submenu" class="submenu-column d-none">
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('director')">
+                                                Director
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('ceo')">
+                                                The Chief Executive Officer (CEO)
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- about navbar end -->
+                        <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership
+                                                                                                        Legacy</strong></a> -->
+                        <!-- leadershiip legacy nav bar start -->
+                        <div class="nav-item dropdown">
+                            <a href="./leadershiplegacy.html" class="nav-link dropdown-toggle">Leadership Legacy</a>
+                            <div class="dropdown-menu custom-dropdown-menu">
+                                <div class="d-flex flex-row flex-wrap gap-2 p-2">
+                                    <button class="custom-dropdown-btn" data-target="LeadershipLegacy"
+                                        onclick="highlightLegacySection(event)">
+                                        Leadership Legacy
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="restoringdemocracy"
+                                        onclick="highlightLegacySection(event)">
+                                        Restoring Democracy
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="economicadvancements"
+                                        onclick="highlightLegacySection(event)">
+                                        Economic Advancements
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="socialdevelopment"
+                                        onclick="highlightLegacySection(event)">
+                                        Social Development
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="environmental"
+                                        onclick="highlightLegacySection(event)">
+                                        Environmental Vision
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="othersectors"
+                                        onclick="highlightLegacySection(event)">
+                                        Other Sectors
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- leadership legacy end -->
                         <div id="nav-logo" class="mx-4 px-3 py-0 shadow shadow-1 rounded-pill">
                             <a href="#" class="navbar-brand d-flex align-items-center p-0">
                                 <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2"
@@ -136,8 +237,7 @@
                         </div>
                         <a href="./publications.html" class="nav-item nav-link"><strong>Research &
                                 Publications</strong></a>
-                        <a href="./share-your-thought.html" class="nav-item nav-link active"><strong>Share your
-                                Thaught</strong></a>
+                        <a href="./share-your-thought.html" class="nav-item nav-link active"><strong>Share your Thaught</strong></a>
                     </div>
                 </div>
             </nav>

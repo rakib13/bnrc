@@ -47,43 +47,47 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+    <div class="container-fluid topbar px-0 px-lg-4 py-2 d-none d-lg-block">
         <div class="container">
             <div class="row gx-0 align-items-center">
                 <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                     <div class="d-flex flex-wrap">
                         <div class="border-end border-danger pe-3">
-                            <a href="./contact.html#location-map" class="text-muted small"><i
-                                    class="fas fa-map-marker-alt text-primary me-2"></i>Find Location</a>
+                            <a href="#" class="text-light small"><i class="fas fa-file-archive text-white me-2"></i> RTD
+                            </a>
                         </div>
                         <div class="ps-3">
-                            <a href="mailto:example@gmail.com" class="text-muted small"><i
-                                    class="fas fa-envelope text-primary me-2"></i>bnrc.org@gmail.com</a>
+                            <a href="./archive.html" class="text-light small"><i
+                                    class="fas fa-archive text-white me-2"></i> Archive </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-flex justify-content-end">
-                        <div class="d-flex border-end border-primary pe-3">
-                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <div class="d-flex border-end border-white pe-2">
+                            <a class="btn p-0 text-primary me-3" href="#"><i
+                                    class="fab fa-facebook-f text-white "></i></a>
+                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter text-white "></i></a>
+                            <a class="btn p-0 text-primary me-3" href="#"><i
+                                    class="fab fa-instagram text-white "></i></a>
+                            <a class="btn p-0 text-primary me-0" href="#"><i
+                                    class="fab fa-linkedin-in text-white "></i></a>
                         </div>
-                        <!-- <div class="px-2">
-                            <a href="#"><small><i class="fas fa-file-archive text-primary me-2"></i>Archive</small></a>
-                        </div> -->
-                        <!-- <div class="dropdown ms-3">
-                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i
-                                        class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item">English</a>
-                                <a href="#" class="dropdown-item">Bangla</a>
-                                <a href="#" class="dropdown-item">French</a>
-                                <a href="#" class="dropdown-item">Spanish</a>
-                                <a href="#" class="dropdown-item">Arabic</a>
+                        <div class="input-group input-group-sm ms-2">
+                            <input type="text" class="form-control" placeholder="Search"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light" type="button">
+                                    <i class="fas fa-search text-white"></i></button>
                             </div>
+                        </div>
+                        <!-- <div class="position-relative rounded-pill ms-2">
+                            <input class="form-control rounded-pill w-100 p-0 ps-2" type="text" placeholder="Search">
+                            <button type="button"
+                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-0 mt-0 me-1"><i
+                                    class="fas fa-search"></i></button>
                         </div> -->
+
                     </div>
                 </div>
             </div>
@@ -93,65 +97,151 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a href="#" class="navbar-brand d-flex align-items-center p-0">
-                    <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 50px; width: auto;">
-                    <span class="d-flex flex-column">
-                        <small class="brand-maintext" style="font-size: 20px;">Bangladesh Nationalist</small>
-                        <small class="brand-maintext" style="font-size: 20px;">Research Centre</small>
-                    </span>
-                </a>
+                <div id="top-logo" class="px-3 py-1 shadow shadow-1 rounded-pill">
+                    <a href="#" class="navbar-brand d-flex align-items-center p-0">
+                        <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 7§0px; width: auto;">
+                        <span class="d-flex flex-column">
+                            <small class="brand-maintext" style="font-size: 16px;">Bangladesh
+                                Nationalist</small>
+                            <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
+                        </span>
+                    </a>
+                    <p
+                        class="mx-auto text-center pb-0 pt-1 mt-1 mb-0 text-dark border border-1 border-bottom-0 border-start-0 border-end-0 border-top-2 border-dark">
+                        <small> <strong>Estd. by the Chairperson Since 2016</strong></small>
+                    </p>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-0 mx-lg-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About BNRC</a>
-                        <!-- <a href="gallery.html" class="nav-item nav-link">Gallery</a> -->
-                        <a href="./leadershiplegacy.html" class="nav-item nav-link">Leadership Legacy</a>
-                        <a href="publications.html" class="nav-item nav-link active">Research & Publications</a>
-
-                        <a href="./publications.html" class="nav-item nav-link">RTD</a>
-                        <a href="./archive.html" class="nav-item nav-link">Archive</a>
-                        <a href="./contact.html" class="nav-item nav-link">Share your Thaught</a>
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                <span class="dropdown-toggle">BNP & Development</span>
+                        <a href="./index.html" class="nav-item nav-link border-right active"><strong>Home</strong></a>
+                        <!-- <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a> -->
+                        <!-- about navbar start -->
+                        <div class="nav-item dropdown">
+                            <a href="./about.html" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">About BNRC</span>
                             </a>
-                            <div class="dropdown-menu">
-                                <a href="agriculture&economics.html" class="dropdown-item">Agriculture & Economics</a>
-                                <a href="constitution&law.html" class="dropdown-item">Constitution & Law</a>
-                                <a href="education&sports.html" class="dropdown-item">Education & Sports</a>
-                                <a href="defense&foreignAffairs.html" class="dropdown-item">Defense & Foreign
-                                    Affairs</a>
-                                <a href="health&development.html" class="dropdown-item">Health & Development</a>
+                            <div class="dropdown-menu custom-dropdown-menu">
+                                <div class="d-flex flex-row flex-wrap gap-2">
+                                    <!-- Main Buttons -->
+                                    <button class="custom-dropdown-btn active" onclick="showSection('mission')">
+                                        Mission
+                                    </button>
+
+                                    <button class="custom-dropdown-btn" onclick="showSection('vision')">
+                                        Vision
+                                    </button>
+
+                                    <button class="custom-dropdown-btn" onclick="showSection('formation')">
+                                        Formation of BNRC
+                                    </button>
+
+                                    <button class="custom-dropdown-btn" onclick="showSection('functions')">
+                                        Functions of BNRC
+                                    </button>
+
+
+                                    <!-- Leadership & Governance -->
+                                    <div class="position-relative">
+                                        <button class="custom-dropdown-btn" onclick="toggleSubmenu('lg-submenu')">
+                                            Leadership & Governance
+                                        </button>
+                                        <div id="lg-submenu" class="submenu-column d-none">
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('leaders')">
+                                                Our Supreme Leaders
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Chairperson')">
+                                                Chairperson Begum Khaleda Zia
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Acting Chairperson')">
+                                                Acting Chairperson Tarique Rahman
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Board of Directors -->
+                                    <div class="position-relative">
+                                        <button class="custom-dropdown-btn" onclick="toggleSubmenu('bd-submenu')">
+                                            Board of Directors
+                                        </button>
+                                        <div id="bd-submenu" class="submenu-column d-none">
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('director')">
+                                                Director
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('ceo')">
+                                                The Chief Executive Officer (CEO)
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div> -->
-                        <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
-                        <!-- <div class="nav-btn px-3">
-                            <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0"
-                                data-bs-toggle="modal" data-bs-target="#searchModal"><i
-                                    class="fas fa-search"></i></button>
-                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Get a
-                                Quote</a>
-                        </div> -->
+                        </div>
+                        <!-- about navbar end -->
+                        <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership
+                                                                                                        Legacy</strong></a> -->
+                        <!-- leadershiip legacy nav bar start -->
+                        <div class="nav-item dropdown">
+                            <a href="./leadershiplegacy.html" class="nav-link dropdown-toggle">Leadership Legacy</a>
+                            <div class="dropdown-menu custom-dropdown-menu">
+                                <div class="d-flex flex-row flex-wrap gap-2 p-2">
+                                    <button class="custom-dropdown-btn" data-target="LeadershipLegacy"
+                                        onclick="highlightLegacySection(event)">
+                                        Leadership Legacy
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="restoringdemocracy"
+                                        onclick="highlightLegacySection(event)">
+                                        Restoring Democracy
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="economicadvancements"
+                                        onclick="highlightLegacySection(event)">
+                                        Economic Advancements
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="socialdevelopment"
+                                        onclick="highlightLegacySection(event)">
+                                        Social Development
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="environmental"
+                                        onclick="highlightLegacySection(event)">
+                                        Environmental Vision
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="othersectors"
+                                        onclick="highlightLegacySection(event)">
+                                        Other Sectors
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- leadership legacy end -->
+                        <div id="nav-logo" class="mx-4 px-3 py-0 shadow shadow-1 rounded-pill">
+                            <a href="#" class="navbar-brand d-flex align-items-center p-0">
+                                <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2"
+                                    style="height: 7§0px; width: auto;">
+                                <span class="d-flex flex-column">
+                                    <small class="brand-maintext" style="font-size: 16px;">Bangladesh
+                                        Nationalist</small>
+                                    <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
+                                </span>
+                            </a>
+                            <p
+                                class="mx-auto text-center pb-0 pt-1 text-dark border border-1 border-bottom-0 border-start-0 border-end-0 mt-1 border-top-2 border-dark">
+                                <small> <strong>Estd. by the Chairperson Since 2016</strong></small>
+                            </p>
+                        </div>
+                        <a href="./publications.html" class="nav-item nav-link"><strong>Research &
+                                Publications</strong></a>
+                        <a href="./share-your-thought.html" class="nav-item nav-link"><strong>Share your
+                                Thaught</strong></a>
                     </div>
                 </div>
-                <!-- <div class="d-none d-xl-flex flex-shrink-0 ps-4">
-                    <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
-                        data-wow-delay=".9s">
-                        <i class="fa fa-phone-alt fa-2x"></i>
-                        <div class="position-absolute" style="top: 7px; right: 12px;">
-                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                        </div>
-                    </a>
-                    <div class="d-flex flex-column ms-3">
-                        <span>Call to Our Experts</span>
-                        <a href="tel:+88 09613241978"><span class="text-dark">Free: +88 09613241978</span></a>
-                    </div>
-                </div> -->
             </nav>
         </div>
     </div>
