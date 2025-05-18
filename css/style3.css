@@ -451,8 +451,6 @@ html {
     width: 100%;
   }
 }
-
-/* ...............reserch and publication start.............................end .... */
 .blog-item {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -468,3 +466,5 @@ html {
   height: auto;
   display: block;
 }
+
+/* ...............reserch and publication start.............................end .... */
