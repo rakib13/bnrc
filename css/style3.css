@@ -75,6 +75,20 @@ html {
   display: inline-block;
 }
 
+/* under line in about BNRC and leadership and legacy */
+.nav-item a,
+.nav-item a * {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+.nav-item a:hover,
+.nav-item a:hover * {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* under line in about BNRC and leadership and legacy */
+
 /* header */
 /* Background overlay behind text */
 /* .animated-banner {
