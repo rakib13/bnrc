@@ -180,6 +180,10 @@
   background: var(--bs-light);
 }
 
+.text-justify{
+  text-align: justify; 
+}
+
 /*** Topbar Start ***/
 .topbar{
   background-color: #00629e;
