@@ -285,8 +285,8 @@
     <div class="container-fluid bg-light py-2">
         <div class="container py-3">
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-sm-12 col-md-11 wow fadeInUp" data-wow-delay="0.3s">
-                    <p class="mb-4 text-justify">
+                <div class="col-lg-10 col-md-11 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <p class="mt-1 mb-4 text-justify">
                         Community engagement fuels progress by bringing diverse perspectives together to shape impactful
                         initiatives. Your feedback— whether about the BNRC, the BNP, or national and international
                         issues—helps identify opportunities, address challenges, and inspire meaningful change. By
@@ -297,43 +297,65 @@
                     </p>
                 </div>
                 <div class="col-lg-10 col-md-11 col-sm-12">
-
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion accordion-flush" id="accrShareYourThought">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button
                                     class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                    aria-expanded="true" aria-controls="flush-collapseOne">
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-general-feed"
+                                    aria-expanded="true" aria-controls="flush-general-feed">
                                     General feedback
                                 </button>
                             </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
+                            <div id="flush-general-feed" class="accordion-collapse collapse show"
+                                data-bs-parent="#accrShareYourThought">
                                 <div class="accordion-body">
                                     <div class="row">
-                                        <div class="col-md-11 col-lg-10 col-sm-12 form-floating">
-                                            <textarea id="msg-general-feed" class="form-control" rows="4"></textarea>
-                                            <label for="msg-general-feed">What is on your mind.......</label>
-                                        </div>
 
-                                        <div class="col-md-11 col-lg-10 col-sm-12 mt-2">
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="form-floating col-md-10 col-lg-10 col-sm-12 mb-3">
+                                            <textarea id="msg-general-feed" class="form-control"
+                                                style="max-height: 250px;"
+                                                placeholder="What is on your mind ..."></textarea>
+                                            <label for="msg-general-feed" class="form-label mx-2 my-1">What is on your
+                                                mind.......</label>
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="col-md-10 col-lg-10 col-sm-12 mb-3">
                                             <input class="form-control" type="file" id="formFile">
-                                            <label for="formFile" class="form-label">Attach your file</label>
                                         </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
 
-                                        <div class="col-md-12 col-lg-12 col-sm-12 mt-2">
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="col-md-10 col-lg-10 col-sm-12 mb-5">
                                             <div class="row">
-                                                <div class="col-md-10 col-lg-10 col-sm-12">Name</div>
-                                                <div class="col-md-6 col-lg-6 col-sm-12">Email</div>
-                                                <div class="col-md-6 col-lg-6 col-sm-12">Mobile</div>
+                                                <div class="form-floating col-md-10 col-lg-10 col-sm-12">
+                                                    <input type="text" class="form-control" id="genUserName"
+                                                        placeholder="Name">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">Name</label>
+                                                </div>
+                                                <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
+                                                    <input type="email" class="form-control" id="genUserName"
+                                                    placeholder="Email">
+                                                <label for="genUserName" class="form-label mx-2 my-1">E-mail</label>
+                                                </div>
+                                                <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
+                                                    <input type="text" class="form-control" id="genUserName"
+                                                    placeholder="Mobile No.">
+                                                <label for="genUserName" class="form-label mx-2 my-1">Mobile No.</label>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -343,7 +365,7 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
+                                data-bs-parent="#accrShareYourThought">
                                 <div class="accordion-body">Placeholder content for this accordion, which is intended to
                                     demonstrate the <code>.accordion-flush</code> class. This is the second item’s
                                     accordion body. Let’s imagine this being filled with some actual content.</div>
@@ -358,7 +380,7 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
+                                data-bs-parent="#accrShareYourThought">
                                 <div class="accordion-body">Placeholder content for this accordion, which is intended to
                                     demonstrate the <code>.accordion-flush</code> class. This is the third item’s
                                     accordion body. Nothing more exciting happening here in terms of content, but just
