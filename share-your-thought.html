@@ -304,7 +304,8 @@
                                     class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#flush-general-feed"
                                     aria-expanded="true" aria-controls="flush-general-feed">
-                                    General feedback
+                                    <span class="fw-bolder">General feedback: </span> Tell us what you think about our
+                                    projects or initiatives
                                 </button>
                             </h2>
                             <div id="flush-general-feed" class="accordion-collapse collapse show"
@@ -339,13 +340,14 @@
                                                 </div>
                                                 <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
                                                     <input type="email" class="form-control" id="genUserName"
-                                                    placeholder="Email">
-                                                <label for="genUserName" class="form-label mx-2 my-1">E-mail</label>
+                                                        placeholder="Email">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">E-mail</label>
                                                 </div>
                                                 <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
                                                     <input type="text" class="form-control" id="genUserName"
-                                                    placeholder="Mobile No.">
-                                                <label for="genUserName" class="form-label mx-2 my-1">Mobile No.</label>
+                                                        placeholder="Mobile No.">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">Mobile
+                                                        No.</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -355,16 +357,17 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Accordion Item #2
+                                <button
+                                    class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-sector-input"
+                                    aria-expanded="false" aria-controls="flush-sector-input">
+                                    <span class="fw-bolder">Sector-Specific Input: </span> Your ideas on how we can
+                                    improve
                                 </button>
                             </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            <div id="flush-sector-input" class="accordion-collapse collapse"
                                 data-bs-parent="#accrShareYourThought">
                                 <div class="accordion-body">Placeholder content for this accordion, which is intended to
                                     demonstrate the <code>.accordion-flush</code> class. This is the second item’s
@@ -373,19 +376,119 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Accordion Item #3
+                                <button
+                                    class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-share-story"
+                                    aria-expanded="false" aria-controls="flush-share-story">
+                                    <span class="fw-bolder">Share Stories: </span>Share how BNP initiatives have
+                                    impacted you or your community
                                 </button>
                             </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            <div id="flush-share-story" class="accordion-collapse collapse"
                                 data-bs-parent="#accrShareYourThought">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the third item’s
-                                    accordion body. Nothing more exciting happening here in terms of content, but just
-                                    filling up the space to make it look, at least at first glance, a bit more
-                                    representative of how this would look in a real-world application.</div>
+                                <div class="accordion-body">
+                                    <div class="row">
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="form-floating col-md-10 col-lg-10 col-sm-12 mb-3">
+                                            <textarea id="msg-general-feed" class="form-control"
+                                                style="max-height: 250px;"
+                                                placeholder="What is on your mind ..."></textarea>
+                                            <label for="msg-general-feed" class="form-label mx-2 my-1">What is on your
+                                                mind.......</label>
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="col-md-10 col-lg-10 col-sm-12 mb-3">
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="col-md-10 col-lg-10 col-sm-12 mb-5">
+                                            <div class="row">
+                                                <div class="form-floating col-md-10 col-lg-10 col-sm-12">
+                                                    <input type="text" class="form-control" id="genUserName"
+                                                        placeholder="Name">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">Name</label>
+                                                </div>
+                                                <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
+                                                    <input type="email" class="form-control" id="genUserName"
+                                                        placeholder="Email">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">E-mail</label>
+                                                </div>
+                                                <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
+                                                    <input type="text" class="form-control" id="genUserName"
+                                                        placeholder="Mobile No.">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">Mobile
+                                                        No.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-faq"
+                                    aria-expanded="false" aria-controls="flush-faq">
+                                    <span class="fw-bolder">Ask Questions: </span> Have a question about a specific
+                                    program or policy? Let us know! </button>
+                            </h2>
+                            <div id="flush-faq" class="accordion-collapse collapse"
+                                data-bs-parent="#accrShareYourThought">
+                                <div class="accordion-body">
+                                    <div class="row">
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="form-floating col-md-10 col-lg-10 col-sm-12 mb-3">
+                                            <textarea id="msg-general-feed" class="form-control"
+                                                style="max-height: 250px;"
+                                                placeholder="What is on your mind ..."></textarea>
+                                            <label for="msg-general-feed" class="form-label mx-2 my-1">What is on your
+                                                mind.......</label>
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="col-md-10 col-lg-10 col-sm-12 mb-3">
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+
+
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+                                        <div class="col-md-10 col-lg-10 col-sm-12 mb-5">
+                                            <div class="row">
+                                                <div class="form-floating col-md-10 col-lg-10 col-sm-12">
+                                                    <input type="text" class="form-control" id="genUserName"
+                                                        placeholder="Name">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">Name</label>
+                                                </div>
+                                                <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
+                                                    <input type="email" class="form-control" id="genUserName"
+                                                        placeholder="Email">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">E-mail</label>
+                                                </div>
+                                                <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
+                                                    <input type="text" class="form-control" id="genUserName"
+                                                        placeholder="Mobile No.">
+                                                    <label for="genUserName" class="form-label mx-2 my-1">Mobile
+                                                        No.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-sm-12"></div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
