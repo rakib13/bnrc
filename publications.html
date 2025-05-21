@@ -53,7 +53,8 @@
                 <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                     <div class="d-flex flex-wrap">
                         <div class="border-end border-danger pe-3">
-                            <a href="#" class="text-light small"><i class="fas fa-file-archive text-white me-2"></i> RTD
+                            <a href="https://roadtodemocracy.com/" target="_blank" class="text-light small"><i
+                                    class="fas fa-file-archive text-white me-2"></i> RTD
                             </a>
                         </div>
                         <div class="ps-3">
@@ -189,7 +190,8 @@
                                                                                                         Legacy</strong></a> -->
                         <!-- leadershiip legacy nav bar start -->
                         <div class="nav-item dropdown">
-                            <a href="./leadershiplegacy.html" class="nav-link dropdown-toggle"><strong>Leadership Legacy</strong></a>
+                            <a href="./leadershiplegacy.html" class="nav-link dropdown-toggle"><strong>Leadership
+                                    Legacy</strong></a>
                             <div class="dropdown-menu custom-dropdown-menu">
                                 <div class="d-flex flex-row flex-wrap gap-2 p-2">
                                     <button class="custom-dropdown-btn" data-target="LeadershipLegacy"
@@ -235,8 +237,38 @@
                                 <small> <strong>Estd. by the Chairperson Since 2016</strong></small>
                             </p>
                         </div>
-                        <a href="./publications.html" class="nav-item nav-link"><strong>Research &
-                                Publications</strong></a>
+                        <!-- <a href="./publications.html" class="nav-item nav-link"><strong>Research &
+                                Publications</strong></a> -->
+
+                        <!-- .........publication start................... -->
+                        <div class="nav-item dropdown">
+                            <a href="./publications.html" class="nav-link dropdown-toggle"><strong>Research &
+                                    Publications</strong></a>
+                            <div class="dropdown-menu custom-dropdown-menu">
+                                <div class="d-flex flex-row flex-wrap gap-2 p-2">
+                                    <button class="custom-dropdown-btn" data-target="featured"
+                                        onclick="featuredSection(event)">
+                                        Featured
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="newsletters"
+                                        onclick="featuredSection(event)">
+                                        Newsletters
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="conferenceproceedings"
+                                        onclick="featuredSection(event)">
+                                        Conference Proceedings
+                                    </button>
+                                    <button class="custom-dropdown-btn" data-target="multimediaresources"
+                                        onclick="featuredSection(event)">
+                                        Multimedia Resources
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ..................publication end.................. -->
+
+
                         <a href="./share-your-thought.html" class="nav-item nav-link"><strong>Share your
                                 Thaught</strong></a>
                     </div>
@@ -352,390 +384,440 @@
                 <!-- <h1 class="display-4 mb-4">News And Updates</h1> -->
 
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="w-100">
-                    <h4 class="text-primary mb-4">Featured</h4>
-                </div>
-                <!-- Blog Item 1 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/points2.JPG" alt="Sample Image 1" class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/d447cd3cc6.html.html">
-                                <span>View Details</span>
+            <section id="featured" class="pdf-gallery">
+
+                <div class="row g-4 justify-content-center">
+                    <div class="w-100">
+                        <h4 class="text-primary mb-4">Featured</h4>
+                    </div>
+                    <!-- Blog Item 1 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/points2.JPG" alt="Sample Image 1"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/d447cd3cc6.html.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.1</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.1</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog Item 2 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/points3.JPG" alt="Sample Image 2" class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/4454557727.html">
-                                <span>View Details</span>
+                    <!-- Blog Item 2 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/points3.JPG" alt="Sample Image 2"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/4454557727.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog Item 3 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/English Book.JPG" alt="Sample Image 3"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/3f84f1b121.html">
-                                <span>View Details</span>
+                    <!-- Blog Item 3 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/English Book.JPG" alt="Sample Image 3"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/3f84f1b121.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.3</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.3</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blog Item 4 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/Bangla Book.jpg" alt="Sample Image 4"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/46cb9c96d4.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.4</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                </div>
 
-
-                <!-- another row..............................Newsletters -->
-
-                <!-- Blog Item 5 -->
-                <div class="w-100">
-                    <h4 class="text-primary mb-4">Newsletters</h4>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/vision bangla_2030.jpg" alt="Sample Image 5"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/8209fa1659.html">
-                                <span>View Details</span>
+                    <!-- Blog Item 4 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/Bangla Book.jpg" alt="Sample Image 4"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/46cb9c96d4.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.4</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
 
                 </div>
+            </section>
 
-                <!-- Blog Item 6 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/vision_2030.jpg" alt="Sample Image 6"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/0dd9b904ec.html">
-                                <span>View Details</span>
+
+
+            <!-- another row..............................Newsletters -->
+
+            <!-- Blog Item 5 -->
+            <section id="newsletters" class="pdf-gallery">
+                <div class="row g-4 justify-content-center">
+                    <div class="w-100">
+                        <h4 class="text-primary mb-4">Newsletters</h4>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/vision bangla_2030.jpg" alt="Sample Image 5"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/8209fa1659.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                         </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+
+                    </div>
+
+                    <!-- Blog Item 6 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/vision_2030.jpg" alt="Sample Image 6"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/0dd9b904ec.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog Item 7 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/baksalfrontpage.jpg" alt="Sample Image 7"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/cb54235352.html">
-                                <span>View Details</span>
+                    <!-- Blog Item 7 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/baksalfrontpage.jpg" alt="Sample Image 7"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/cb54235352.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog Item 8 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/points1.JPG" alt="Sample Image 8" class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/602a7bc542.html">
-                                <span>View Details</span>
+                    <!-- Blog Item 8 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/points1.JPG" alt="Sample Image 8"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/602a7bc542.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Item another row...........................Conference Proceedings -->
-                <div class="w-100">
-                    <h4 class="text-primary mb-4">Conference Proceedings</h4>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/vision bangla_2030.jpg" alt="Sample Image 5"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/8209fa1659.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blog Item 6 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/vision_2030.jpg" alt="Sample Image 6"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/0dd9b904ec.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Blog Item 7 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/baksalfrontpage.jpg" alt="Sample Image 7"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/cb54235352.html">
-                                <span>View Details</span>
+            </section>
+
+            <!-- Blog Item another row...........................Conference Proceedings -->
+            <section id="conferenceproceedings" class="pdf-gallery">
+                <div class="row g-4 justify-content-center">
+                    <div class="w-100">
+                        <h4 class="text-primary mb-4">Conference Proceedings</h4>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/vision bangla_2030.jpg" alt="Sample Image 5"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/8209fa1659.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                         </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                    </div>
+
+                    <!-- Blog Item 6 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/vision_2030.jpg" alt="Sample Image 6"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/0dd9b904ec.html">
+                                    <span>View Details</span>
+                                </div>
                             </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Item 7 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/baksalfrontpage.jpg" alt="Sample Image 7"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/cb54235352.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Item 8 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/points1.JPG" alt="Sample Image 8"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/602a7bc542.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- another row 4...............Multimedia Resources........... -->
+            <!-- Blog Item 5 -->
+            <section id="multimediaresources" class="pdf-gallery">
+                <div class="row g-4 justify-content-center">
+                    <div class="w-100">
+                        <h4 class="text-primary mb-4">Multimedia Resources</h4>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/vision bangla_2030.jpg" alt="Sample Image 5"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/8209fa1659.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Item 6 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/vision_2030.jpg" alt="Sample Image 6"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/0dd9b904ec.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Item 7 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/baksalfrontpage.jpg" alt="Sample Image 7"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/cb54235352.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Item 8 -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/pdf-cover/publications/points1.JPG" alt="Sample Image 8"
+                                    class="img-fluid">
+                                <div class="blog-categiry pdf-link py-2 px-4"
+                                    data-pdf="https://heyzine.com/flip-book/602a7bc542.html">
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
+                                    state.2</a>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Blog Item 8 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/points1.JPG" alt="Sample Image 8" class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/602a7bc542.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- another row 4...............Multimedia Resources........... -->
-                <!-- Blog Item 5 -->
-                <div class="w-100">
-                    <h4 class="text-primary mb-4">Multimedia Resources</h4>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/vision bangla_2030.jpg" alt="Sample Image 5"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/8209fa1659.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
+            </section>
 
-                <!-- Blog Item 6 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/vision_2030.jpg" alt="Sample Image 6"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/0dd9b904ec.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Blog Item 7 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/baksalfrontpage.jpg" alt="Sample Image 7"
-                                class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/cb54235352.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blog Item 8 -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/pdf-cover/publications/points1.JPG" alt="Sample Image 8" class="img-fluid">
-                            <div class="blog-categiry pdf-link py-2 px-4"
-                                data-pdf="https://heyzine.com/flip-book/602a7bc542.html">
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <div class="blog-comment d-flex justify-content-between mb-3">
-                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                            </div>
-                            <a href="#" class="h5 d-inline-block mb-3">An outline of the structure reforms of the
-                                state.2</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- <div id="pdfModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="pdfIframe" src="" frameborder="0" style="width:100%; height:80vh;"></iframe>
             </div>
-
-            <div id="pdfModal" class="modal">
+        </div> -->
+            <!-- Modal -->
+            <div class="modal-overlay" id="pdf-modal" style="display:none">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <iframe id="pdfIframe" src="" frameborder="0" style="width:100%; height:80vh;"></iframe>
+                    <span class="modal-close" id="close-modal">&times;</span>
+                    <iframe src="" id="pdf-frame" width="100%" height="100%"></iframe>
                 </div>
             </div>
         </div>

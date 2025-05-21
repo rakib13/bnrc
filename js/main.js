@@ -111,12 +111,12 @@
 })(jQuery);
 
 
-// publication js
+// ....................publication js.....................................
 
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("pdfModal");
     const iframe = document.getElementById("pdfIframe");
-    const closeBtn = document.querySelector(".modal .close");
+    const closeBtn = document.querySelector("close-modal");
 
     document.querySelectorAll('.pdf-link').forEach(function(link) {
       link.addEventListener('click', function(e) {
@@ -141,6 +141,30 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
 });
+
+function featuredSection(event) {
+  const targetId = event.currentTarget.getAttribute('data-target');
+  const targetSection = document.getElementById(targetId);
+
+  // Highlight only the clicked section
+  document.querySelectorAll('.pdf-gallery').forEach(section => {
+    section.classList.remove('active-highlight');
+  });
+
+  if (targetSection) {
+    targetSection.classList.add('active-highlight');
+    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Update active button styles
+  document.querySelectorAll('.custom-dropdown-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.currentTarget.classList.add('active');
+}
+
+
+// ..................publication end.........................................
 
 // gallery js.........................................................................
 document.addEventListener('DOMContentLoaded', function() {
