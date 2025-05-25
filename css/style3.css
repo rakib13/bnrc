@@ -15,64 +15,109 @@
 html {
   scroll-behavior: smooth;
 }
+/* Smaller dropdown container */
 .custom-dropdown-menu {
-  min-width: 800px !important;
-  padding: 1.5rem !important;
+  width: 220px !important;
+  padding: 0.75rem !important;
   border: 2px solid #2b6cb0 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 30px rgba(43, 108, 176, 0.15) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 20px rgba(43, 108, 176, 0.1) !important;
+  background: white;
+  display: none;
 }
 
+/* Compact dropdown buttons */
 .custom-dropdown-btn {
-  border: 2px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
-  transition: all 0.3s ease;
+  width: 100%;
   text-align: left;
-  background: white;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  border-radius: 4px;
   color: #2b6cb0;
-  flex: 1 1 200px;
-  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
 }
 
 .custom-dropdown-btn:hover {
-  background: linear-gradient(135deg, #f8fafc 0%, #ebf4ff 100%);
-  transform: translateY(-2px);
-  border-color: #2b6cb0;
-  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.15);
+  background-color: #edf2f7;
 }
 
 .custom-dropdown-btn.active {
-  background: #2b6cb0 !important;
-  color: white !important;
-  border-color: #2b6cb0;
+  background-color: #2b6cb0;
+  color: white;
 }
 
 .custom-dropdown-btn.active::after {
   content: "➤";
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  float: right;
 }
 
+/* Compact submenu style */
 .submenu-column {
-  border-left: 2px solid #e2e8f0;
-  margin-left: 1rem;
-  padding-left: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 5px;
+  width: 200px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(43, 108, 176, 0.1);
+  display: none;
 }
 
-.btn-outline-primary.active {
-  background: #2b6cb0 !important;
-  color: white !important;
-  border-color: #2b6cb0;
+.submenu-column button {
+  width: 100%;
+  text-align: left;
+  color: #2b6cb0;
+  font-size: 13.5px;
+  padding: 0.4rem 0;
+  background: none;
+  border: none;
 }
 
-.btn-outline-primary.active::after {
-  content: "➤";
-  margin-left: 10px;
+.submenu-column button:hover {
+  background-color: #f0f4f8;
+}
+
+
+
+/* Arrow next to label */
+ .about-label .arrow {
   display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+} 
+
+
+
+/* Hover rotation and dropdown visibility on desktop */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-item.dropdown:hover .arrow {
+    transform: rotate(180deg);
+  }
+
+  .submenu-column.d-none {
+    display: none !important;
+  }
+
+  .submenu-column:not(.d-none) {
+    display: block !important;
+  }
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* under line in about BNRC and leadership and legacy */
@@ -86,6 +131,115 @@ html {
     text-decoration: none !important;
     border-bottom: none !important;
 }
+
+/* ............ about  page and nav bar........... */
+
+/* Compact dropdown menu */
+/* Smaller dropdown container */
+/* .custom-dropdown-menu {
+  width: 220px !important;
+  padding: 0.75rem !important;
+  border: 2px solid #2b6cb0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 20px rgba(43, 108, 176, 0.1) !important;
+  background: white;
+  display: none;
+}
+
+/* Compact dropdown buttons */
+/* .custom-dropdown-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: #2b6cb0;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+} */
+
+/* .custom-dropdown-btn:hover {
+  background-color: #edf2f7;
+}
+
+.custom-dropdown-btn.active {
+  background-color: #2b6cb0;
+  color: white;
+}
+
+.custom-dropdown-btn.active::after {
+  content: "➤";
+  float: right;
+} */
+
+/* Compact submenu style */
+/* .submenu-column {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 5px;
+  width: 200px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(43, 108, 176, 0.1);
+  display: none;
+}
+
+.submenu-column button {
+  width: 100%;
+  text-align: left;
+  color: #2b6cb0;
+  font-size: 13.5px;
+  padding: 0.4rem 0;
+  background: none;
+  border: none;
+} */
+/*
+.submenu-column button:hover {
+  background-color: #f0f4f8;
+} */
+
+
+
+/* Arrow next to label */
+ /* .about-label .arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}  */
+
+
+
+/* Hover rotation and dropdown visibility on desktop */
+/* @media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-item.dropdown:hover .arrow {
+    transform: rotate(180deg);
+  }
+
+  .submenu-column.d-none {
+    display: none !important;
+  }
+
+  .submenu-column:not(.d-none) {
+    display: block !important;
+  }
+}
+
+/* Optional fade-in animation */
+/*@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+/* ...........about page nav bar ........................ */
 
 /* under line in about BNRC and leadership and legacy */
 

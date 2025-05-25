@@ -284,36 +284,78 @@ document.addEventListener('DOMContentLoaded', function() {
 /*..................... About start btn click start BNRC..............*/
 
 // Show/hide sections
-function showSection(sectionId) {
-    // Hide all sections
-    document.querySelectorAll('.about-item-content').forEach(section => {
-        section.classList.remove('active');
-    });
+// function showSection(sectionId) {
+//     // Hide all sections
+//     document.querySelectorAll('.about-item-content').forEach(section => {
+//         section.classList.remove('active');
+//     });
 
-    // Show selected section
-    const targetSection = document.getElementById(sectionId);
-    if(targetSection) {
-        targetSection.classList.add('active');
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
+//     // Show selected section
+//     const targetSection = document.getElementById(sectionId);
+//     if(targetSection) {
+//         targetSection.classList.add('active');
+//         targetSection.scrollIntoView({ behavior: 'smooth' });
+//     }
 
-    // Update button states
-    document.querySelectorAll('.btn-outline-primary').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    event.target.classList.add('active');
-}
+//     // Update button states
+//     document.querySelectorAll('.btn-outline-primary').forEach(btn => {
+//         btn.classList.remove('active');
+//     });
+//     event.target.classList.add('active');
+// }
 
-// Toggle submenus with animation
-function toggleSubmenu(id) {
-    const submenu = document.getElementById(id);
-    submenu.classList.toggle('d-none');
+// // Toggle submenus with animation
+// function toggleSubmenu(id) {
+//     const submenu = document.getElementById(id);
+//     submenu.classList.toggle('d-none');
     
-    // Close other submenus
-    document.querySelectorAll('.dropdown-menu .d-none').forEach(menu => {
-        if(menu.id !== id) menu.classList.add('d-none');
-    });
+//     // Close other submenus
+//     document.querySelectorAll('.dropdown-menu .d-none').forEach(menu => {
+//         if(menu.id !== id) menu.classList.add('d-none');
+//     });
+// }
+
+function handleAboutClick(event) {
+  // Only activate click toggle on small screens
+  if (window.innerWidth < 992) {
+    event.preventDefault();
+    const menu = event.currentTarget.nextElementSibling;
+    if (menu) {
+      menu.classList.toggle('show');
+    }
+  }
 }
+
+function showSection(sectionId, event) {
+  // Hide all sections
+  document.querySelectorAll('.about-item-content').forEach(section => {
+    section.classList.remove('active');
+  });
+
+  // Show selected section
+  const targetSection = document.getElementById(sectionId);
+  if (targetSection) {
+    targetSection.classList.add('active');
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Update button states
+  document.querySelectorAll('.custom-dropdown-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  if (event) event.target.classList.add('active');
+}
+
+function toggleSubmenu(id) {
+  const submenu = document.getElementById(id);
+  submenu.classList.toggle('d-none');
+
+  // Close other submenus
+  document.querySelectorAll('.submenu-column').forEach(menu => {
+    if (menu.id !== id) menu.classList.add('d-none');
+  });
+}
+
 
 /*..................... About start btn click start BNRC............END..*/
 
