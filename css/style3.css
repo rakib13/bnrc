@@ -83,16 +83,12 @@ html {
   background-color: #f0f4f8;
 }
 
-
-
 /* Arrow next to label */
- .about-label .arrow {
+.about-label .arrow {
   display: inline-block;
   margin-left: 5px;
   transition: transform 0.3s ease;
-} 
-
-
+}
 
 /* Hover rotation and dropdown visibility on desktop */
 @media (min-width: 992px) {
@@ -116,20 +112,26 @@ html {
 
 /* Optional fade-in animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* under line in about BNRC and leadership and legacy */
 .nav-item a,
 .nav-item a * {
-    text-decoration: none !important;
-    border-bottom: none !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 .nav-item a:hover,
 .nav-item a:hover * {
-    text-decoration: none !important;
-    border-bottom: none !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 /* ............ about  page and nav bar........... */
@@ -203,16 +205,12 @@ html {
   background-color: #f0f4f8;
 } */
 
-
-
 /* Arrow next to label */
- /* .about-label .arrow {
+/* .about-label .arrow {
   display: inline-block;
   margin-left: 5px;
   transition: transform 0.3s ease;
 }  */
-
-
 
 /* Hover rotation and dropdown visibility on desktop */
 /* @media (min-width: 992px) {
@@ -542,6 +540,11 @@ html {
   border-radius: 10px;
   margin-bottom: 1rem;
   background: #fff;
+}
+.full-underline {
+  border-bottom: 2px solid maroon; /* Maroon underline */
+  padding-bottom: 10px; /* Space between text and line */
+  margin-bottom: 20px; /* Space below line */
 }
 
 /* leadership and legacy */
