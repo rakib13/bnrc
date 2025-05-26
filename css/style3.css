@@ -83,8 +83,8 @@ html {
   background-color: #f0f4f8;
 }
 
-/* Arrow next to label */
-.about-label .arrow {
+/* Arrow up and down next to label */
+.arrow {
   display: inline-block;
   margin-left: 5px;
   transition: transform 0.3s ease;
