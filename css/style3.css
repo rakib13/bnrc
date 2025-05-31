@@ -639,3 +639,14 @@ html {
 }
 
 /* ...............reserch and publication start.............................end .... */
+
+/* share your thought provacy  check box   start */
+.form-check-label a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-check-label a:hover {
+  text-decoration: underline;
+}
+/* share your thought provacy  check box   END */

@@ -762,3 +762,13 @@ function highlightLegacySection(event) {
 //book
 
 /*......... leadership button click and pdf handling start legacy ...........END............*/
+
+
+// share your  thought check box script start.................
+
+function toggleSection(sectionId, checkbox) {
+    const section = document.getElementById(sectionId);
+    section.style.display = checkbox.checked ? 'block' : 'none';
+  }
+
+// share your  thought check box script END.................

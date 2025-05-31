@@ -98,7 +98,7 @@
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
-   <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div id="top-logo" class="px-3 py-1 shadow shadow-1 rounded-pill">
@@ -124,8 +124,8 @@
                         <!-- <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a> -->
                         <!-- about navbar start -->
                         <div class="nav-item dropdown">
-                            <a href="./about.html" class="nav-item nav-link dropdown-toggle" id="aboutDropdownToggle" role="button"
-                                onclick="handleAboutClick(event)">
+                            <a href="./about.html" class="nav-item nav-link dropdown-toggle" id="aboutDropdownToggle"
+                                role="button" onclick="handleAboutClick(event)">
                                 <span class="about-label">
                                     <strong>About BNRC</strong>
                                     <span class="arrow">▼</span>
@@ -137,56 +137,81 @@
                                     <button class="custom-dropdown-btn active" onclick="showSection('mission', event)">
                                         Mission
                                     </button>
-                        
+
                                     <button class="custom-dropdown-btn" onclick="showSection('vision', event)">
                                         Vision
                                     </button>
-                        
+
                                     <button class="custom-dropdown-btn" onclick="showSection('formation', event)">
                                         Formation of BNRC
                                     </button>
-                        
+
                                     <button class="custom-dropdown-btn" onclick="showSection('functions', event)">
                                         Functions of BNRC
                                     </button>
                                 </div>
-                        
+
                                 <!-- Leadership & Governance -->
                                 <div class="position-relative mt-2">
                                     <button class="custom-dropdown-btn" onclick="toggleSubmenu('lg-submenu')">
                                         Leadership & Governance
                                     </button>
                                     <div id="lg-submenu" class="submenu-column d-none">
-                                        <button class="btn btn-link text-start w-100 my-1" onclick="showSection('leaders', event)">
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('leaders', event)">
                                             Our Supreme Leaders
+
+
+                                            <!-- <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Chairperson', event)">
+                                                Chairperson Begum Khaleda Zia
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Acting Chairperson', event)"> Acting Chairperson
+                                                Tarique Rahman
+                                            </button>
+ -->
+
                                         </button>
-                                        <button class="btn btn-link text-start w-100 my-1" onclick="showSection('Chairperson', event)">
+                                        <!-- <button class="btn btn-link text-start w-100 my-1" onclick="showSection('Chairperson', event)">
                                             Chairperson Begum Khaleda Zia
                                         </button>
                                         <button class="btn btn-link text-start w-100 my-1" onclick="showSection('Acting Chairperson', event)">
                                             Acting Chairperson Tarique Rahman
+                                        </button> -->
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('director', event)">
+                                            Board of Directors
                                         </button>
+
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('ceo', event)">
+                                            The Research Team
+                                        </button>
+
                                     </div>
                                 </div>
-                        
+
                                 <!-- Board of Directors -->
-                                <div class="position-relative mt-2">
+                                <!-- <div class="position-relative mt-2">
                                     <button class="custom-dropdown-btn" onclick="toggleSubmenu('bd-submenu')">
                                         Board of Directors
                                     </button>
                                     <div id="bd-submenu" class="submenu-column d-none">
-                                        <button class="btn btn-link text-start w-100 my-1" onclick="showSection('director', event)">
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('director', event)">
                                             Director
                                         </button>
-                                        <button class="btn btn-link text-start w-100 my-1" onclick="showSection('ceo', event)">
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('ceo', event)">
                                             The Chief Executive Officer (CEO)
                                         </button>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- about navbar end -->
-                         <!-- .........publication start................... -->
+                        <!-- .........publication start................... -->
                         <div class="nav-item dropdown">
                             <a href="./publications.html" class="nav-link dropdown-toggle"><strong>Research &
                                     Publications</strong></a>
@@ -215,7 +240,7 @@
                         <!-- ..................publication end.................. -->
                         <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership
                                                                                                         Legacy</strong></a> -->
-                        
+
                         <div id="nav-logo" class="mx-4 px-3 py-0 shadow shadow-1 rounded-pill">
                             <a href="#" class="navbar-brand d-flex align-items-center p-0">
                                 <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2"
@@ -757,9 +782,9 @@
 
                                 </p>
                             </section>
-                        </div>
-                        <!-- Khaleda Zia...................... -->
-                        <div id="Chairperson" class="about-item-content bg-white rounded p-5 h-100 section">
+
+                            <!-- Khaleda Zia...................... -->
+                            <!-- <div id="Chairperson" class="about-item-content bg-white rounded p-5 h-100 section"> -->
                             <h4 class="text-primary text-center">Chairperson Begum Khaleda Zia</h4>
                             <div style="text-align: center; margin: 30px 0;">
                                 <img src="img/khaledazia.jpg" alt="Ziaur Rahman"
@@ -959,10 +984,10 @@
                                     hope for a democratic future and the liberation of Bangladesh from authoritarian
                                     rule. </p>
                             </section>
-                        </div>
+                            <!-- </div> -->
 
-                        <!-- tareq Rahman................................ -->
-                        <div id="Acting Chairperson" class="about-item-content bg-white rounded p-5 h-100 section">
+                            <!-- tareq Rahman................................ -->
+                            <!-- <div id="Acting Chairperson" class="about-item-content bg-white rounded p-5 h-100 section"> -->
                             <h4 class="text-primary text-center">Acting Chairperson Tareque Rahman</h4>
                             <div style="text-align: center; margin: 30px 0;">
                                 <img src="img/tareqrahman.jpg" alt="Ziaur Rahman"
