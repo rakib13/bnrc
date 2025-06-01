@@ -547,6 +547,15 @@ html {
   margin-bottom: 20px; /* Space below line */
 }
 
+
+.container-fluid + .container-fluid.service {
+    padding-top: 0 !important;
+}
+.service {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* leadership and legacy */
 
 /* ..................reserch and publication start................................. */
