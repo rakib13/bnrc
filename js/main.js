@@ -767,8 +767,23 @@ function highlightLegacySection(event) {
 // share your  thought check box script start.................
 
 function toggleSection(sectionId, checkbox) {
-    const section = document.getElementById(sectionId);
-    section.style.display = checkbox.checked ? 'block' : 'none';
+  const anonymousCheck = document.getElementById('anonymousCheck');
+  const recognizedCheck = document.getElementById('recognizedCheck');
+  const anonymousSection = document.getElementById('anonymousSection');
+  const recognizedSection = document.getElementById('recognized');
+
+  if (checkbox.id === 'anonymousCheck' && checkbox.checked) {
+    recognizedCheck.checked = false;
+    anonymousSection.style.display = 'block';
+    recognizedSection.style.display = 'none';
+  } else if (checkbox.id === 'recognizedCheck' && checkbox.checked) {
+    anonymousCheck.checked = false;
+    recognizedSection.style.display = 'block';
+    anonymousSection.style.display = 'none';
+  } else {
+    // If unchecked, hide the corresponding section
+    document.getElementById(sectionId).style.display = 'none';
   }
+}
 
 // share your  thought check box script END.................

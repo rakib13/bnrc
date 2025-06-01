@@ -381,34 +381,31 @@
                 </div>
 
                 <div class="accordion-item">
-                    <div class="col-lg-10 col-md-11 col-sm-12">
+                    <div class="w-100">
+                        <h4 class="text-primary mb-4">Submit Your Thoughts:</h4>
+                    </div>
+                    <div class="col-lg-10 col-md-11 col-sm-12 wow fadeInUp">
                         <div class="accordion accordion-flush" id="accrShareYourThought">
-                            <h2 class="text-primary mb-4">Select your preferred submission status</h2>
+                            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
 
-                            <!-- Row for Side-by-Side Checkboxes -->
-                            <div class="row mb-3">
-                                <!-- First Checkbox -->
-                                <div class="col-auto d-flex align-items-center">
+                                <h2 class="h6 text-black mb-0 me-3">Select your preferred submission status:</h2>
+
+                                <div class="form-check d-flex align-items-center m-0">
                                     <input class="form-check-input me-2" type="checkbox" id="anonymousCheck"
                                         onchange="toggleSection('anonymousSection', this)">
-                                    <label class="form-check-label" for="anonymousCheck">
-                                        A. Remain anonymous
-                                    </label>
+                                    <label class="form-check-label" for="anonymousCheck">A. Remain anonymous</label>
                                 </div>
 
-                                <!-- Second Checkbox -->
-                                <div class="col-auto d-flex align-items-center">
+                                <div class="form-check d-flex align-items-center m-0">
                                     <input class="form-check-input me-2" type="checkbox" id="recognizedCheck"
                                         onchange="toggleSection('recognized', this)">
-                                    <label class="form-check-label" for="recognizedCheck">
-                                        B. Be recognized
-                                    </label>
+                                    <label class="form-check-label" for="recognizedCheck">B. Be recognized</label>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- firt check box.............................. -->
+                    <!-- first check box.............................. -->
                     <div id="recognized" style="display: none;" class="mt-4">
                         <h2 class="accordion-header">
                             <button
@@ -472,8 +469,8 @@
 
                     </div>
 
-                    <!-- secobd check bo...................... -->
-                    <div id="anonymousCheck" style="display: none;" class="mt-4">
+                    <!-- seconed check bo...................... -->
+                    <div id="anonymousSection" style="display: none;" class="mt-4">
                         <h2 class="accordion-header">
                             <button
                                 class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
@@ -507,7 +504,7 @@
 
 
                                     <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                                    <div class="col-md-10 col-lg-10 col-sm-12 mb-5">
+                                    <!-- <div class="col-md-10 col-lg-10 col-sm-12 mb-5">
                                         <div class="row">
                                             <div class="form-floating col-md-10 col-lg-10 col-sm-12">
                                                 <input type="text" class="form-control" id="genUserName"
@@ -526,7 +523,7 @@
                                                     No.</label>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md-1 col-lg-1 col-sm-12"></div>
 
                                 </div>
