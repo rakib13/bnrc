@@ -97,35 +97,40 @@
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
-    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div id="top-logo" class="px-3 py-1 shadow shadow-1 rounded-pill">
-                    <a href="#" class="navbar-brand d-flex align-items-center p-0">
-                        <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 7§0px; width: auto;">
-                        <span class="d-flex flex-column">
-                            <small class="brand-maintext" style="font-size: 16px;">Bangladesh
-                                Nationalist</small>
-                            <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
-                        </span>
-                    </a>
-                    <p
-                        class="mx-auto text-center pb-0 pt-1 mt-1 mb-0 text-dark border border-1 border-bottom-0 border-start-0 border-end-0 border-top-2 border-dark">
-                        <small> <strong>Estd. by the Chairperson Since 2016</strong></small>
-                    </p>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-0 mx-lg-auto">
-                        <a href="./index.html" class="nav-item nav-link border-right active"><strong>Home</strong></a>
-                        <!-- <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a> -->
-                        <!-- about navbar start -->
-                        <div class="nav-item dropdown">
+    <div class="container-fluid nav-bar px-lg-0 px-md-0 px-sm-1">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div id="top-logo" class="px-1 py-1 shadow shadow-1 rounded-pill">
+                <a href="#" class="navbar-brand d-flex align-items-center p-0 me-0 ">
+                    <img src="./img/nav-logo.png" alt="Logo BNRC">
+                </a>
+                <!-- <a href="#" class="navbar-brand d-flex align-items-center p-0 me-0 ">
+                    <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="ms-3 me-2" style="height: 65px; width: auto;">
+                    <span class="d-flex flex-column me-0">
+                        <small class="brand-maintext" style="font-size: 16px;">Bangladesh
+                            Nationalist</small>
+                        <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
+                    </span>
+                </a>
+                <p class="mx-auto text-center pb-0 pt-0 ms-5 me-5 mt-0 mb-0 text-dark border border-1 border-bottom-2 border-start-0 border-end-0 border-top-0 border-dark"
+                    style="line-height:1;">
+                    <small style="font-size: 12px;"> <strong>Estd. by the auth. of Khaleda Zia 2016</strong></small>
+                </p> -->
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-0 mx-lg-auto">
+                    <a href="./index.html" class="nav-item nav-link border-right active"><strong>Home</strong></a>
+                    <!-- <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a> -->
+                    <!-- about navbar start -->
+                    <div class="nav-item dropdown">
                             <a href="./about.html" class="nav-item nav-link dropdown-toggle" id="aboutDropdownToggle"
                                 role="button" onclick="handleAboutClick(event)">
-                                <span><strong>About BNRC</strong></span>
+                                <span class="about-label">
+                                    <strong>About BNRC</strong>
+                                    <span class="arrow">▼</span>
+                                </span>
                             </a>
                             <div class="dropdown-menu custom-dropdown-menu">
                                 <div class="d-flex flex-row flex-wrap gap-2">
@@ -146,8 +151,9 @@
                                         Functions of BNRC
                                     </button>
                                 </div>
+
                                 <!-- Leadership & Governance -->
-                                <div class="position-relative">
+                                <div class="position-relative mt-2">
                                     <button class="custom-dropdown-btn" onclick="toggleSubmenu('lg-submenu')">
                                         Leadership & Governance
                                     </button>
@@ -155,20 +161,40 @@
                                         <button class="btn btn-link text-start w-100 my-1"
                                             onclick="showSection('leaders', event)">
                                             Our Supreme Leaders
+
+
+                                            <!-- <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Chairperson', event)">
+                                                Chairperson Begum Khaleda Zia
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Acting Chairperson', event)"> Acting Chairperson
+                                                Tarique Rahman
+                                            </button>
+ -->
+
                                         </button>
-                                        <button class="btn btn-link text-start w-100 my-1"
-                                            onclick="showSection('Chairperson', event)">
+                                        <!-- <button class="btn btn-link text-start w-100 my-1" onclick="showSection('Chairperson', event)">
                                             Chairperson Begum Khaleda Zia
                                         </button>
-                                        <button class="btn btn-link text-start w-100 my-1"
-                                            onclick="showSection('Acting Chairperson', event)">
+                                        <button class="btn btn-link text-start w-100 my-1" onclick="showSection('Acting Chairperson', event)">
                                             Acting Chairperson Tarique Rahman
+                                        </button> -->
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('director', event)">
+                                            Board of Directors
                                         </button>
+
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('ceo', event)">
+                                            The Research Team
+                                        </button>
+
                                     </div>
                                 </div>
 
                                 <!-- Board of Directors -->
-                                <div class="position-relative">
+                                <!-- <div class="position-relative mt-2">
                                     <button class="custom-dropdown-btn" onclick="toggleSubmenu('bd-submenu')">
                                         Board of Directors
                                     </button>
@@ -182,12 +208,12 @@
                                             The Chief Executive Officer (CEO)
                                         </button>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <!-- about navbar end -->
-                        <!-- .........publication start................... -->
-                        <div class="nav-item dropdown">
+                    <!-- about navbar end -->
+                    <!-- .........publication start................... -->
+                   <div class="nav-item dropdown">
                             <a href="./publications.html" class="nav-link dropdown-toggle"><strong>Research &
                                     Publications</strong>
                                 <span class="arrow">▼</span></a>
@@ -213,31 +239,21 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- ..................publication end.................. -->
-                        <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership
-                                                                                                        Legacy</strong></a> -->
+                    <!-- ..................publication end.................. -->
+                    <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership Legacy</strong></a> -->
 
-                        <div id="nav-logo" class="mx-4 px-3 py-0 shadow shadow-1 rounded-pill">
-                            <a href="#" class="navbar-brand d-flex align-items-center p-0">
-                                <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2"
-                                    style="height: 7§0px; width: auto;">
-                                <span class="d-flex flex-column">
-                                    <small class="brand-maintext" style="font-size: 16px;">Bangladesh
-                                        Nationalist</small>
-                                    <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
-                                </span>
-                            </a>
-                            <p
-                                class="mx-auto text-center pb-0 pt-1 text-dark border border-1 border-bottom-0 border-start-0 border-end-0 mt-1 border-top-2 border-dark">
-                                <small> <strong>(Est. by the auth. of Khaleda Zia in 2016)</strong></small>
-                            </p>
-                        </div>
-                        <!-- <a href="./publications.html" class="nav-item nav-link"><strong>Research &
+                    <div id="nav-logo" class="mx-1 px-1 py-0 shadow shadow-1 rounded-pill">
+                        <a href="#" class="navbar-brand d-flex align-items-center p-0 me-0 ">
+                            <img src="./img/tt.png" alt="Logo BNRC">
+                        </a>
+                    </div>
+                    <!-- <a href="./publications.html" class="nav-item nav-link"><strong>Research &
                                 Publications</strong></a> -->
-                        <!-- leadershiip legacy nav bar start -->
-                        <div class="nav-item dropdown">
+                    <!-- leadershiip legacy nav bar start -->
+                   <div class="nav-item dropdown">
                             <a href="./leadershiplegacy.html" class="nav-link dropdown-toggle"><strong>Leadership
-                                    Legacy</strong></a>
+                                    Legacy</strong>
+                                <span class="arrow">▼</span></a>
                             <div class="dropdown-menu custom-dropdown-menu">
                                 <div class="d-flex flex-row flex-wrap gap-2 p-2">
                                     <button class="custom-dropdown-btn" data-target="LeadershipLegacy"
@@ -267,13 +283,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- leadership legacy end -->
-                        <a href="./share-your-thought.html" class="nav-item nav-link"><strong>Share your
-                                Thaught</strong></a>
-                    </div>
+                    <!-- leadership legacy end -->
+                    <a href="./share-your-thought.html" class="nav-item nav-link"><strong>Share your
+                            Thaught</strong></a>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </div>
     <!-- Navbar & Hero End -->
 
@@ -311,27 +326,42 @@
     </div>
     <!-- Header End -->
 
-    <div class="col-sm-12 col-lg-4 col-xl-3">
-        <p class=" col-12" style="text-align: justify;">
-            Welcome to our Research & Publication hub—where knowledge drives policy, innovation, and national
-            development.
-            At BNRC, we believe research is the backbone of informed decision-making. Our studies and publications
-            support
-            evidence-based policymaking, fostering sustainable growth, social justice, and national unity—aligned with
-            the
-            Bangladesh Nationalist Party’s vision for the country’s future.
-            Through rigorous analysis and strategic insights, we bridge the gap between academia, policymakers, and the
-            public, ensuring impactful research contributes to the democratic process. Our work spans a diverse range of
-            national and international topics, from macro-organizational strategies to micro-economic challenges.
-    
-        </p>
-    </div>
+   
 
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">            
+            <div class="col-md-12" style="text-align: justify;">
+                <p>
+                    Welcome to our Research & Publication hub—where knowledge drives policy, innovation, and national
+                    development.
+                    At BNRC, we believe research is the backbone of informed decision-making. Our studies and
+                    publications
+                    support
+                    evidence-based policymaking, fostering sustainable growth, social justice, and national
+                    unity—aligned with
+                    the
+                    Bangladesh Nationalist Party’s vision for the country’s future.
+                    Through rigorous analysis and strategic insights, we bridge the gap between academia, policymakers,
+                    and the
+                    public, ensuring impactful research contributes to the democratic process. Our work spans a diverse
+                    range of
+                    national and international topics, from macro-organizational strategies to micro-economic
+                    challenges.
+                </p>
+            </div>
+             
+        </div>
+    </div>
+</div>
     <!-- Blog Start -->
     <div class="container-fluid blog py-5">
         <div class="container py-5">
 
             <!-- START archive filter (horizontal) -->
+            <div class="w-100">
+                <h4 class="text-primary text-center mb-4">A Search and Filter Options</h4>
+            </div>
             <div class="archive-filters shadow-box">
                 <div class="filter-item">
                     <i class="fas fa-search icon"></i>
@@ -404,6 +434,10 @@
                 <div class="row g-4 justify-content-center">
                     <div class="w-100">
                         <h4 class="text-primary mb-4">Featured</h4>
+                        <p class="mb-3">Discover our most influential research and key publications. This section
+                            highlights groundbreaking studies, expert analyses, and thought-provoking findings that
+                            shape discussions in critical fields. Start here to explore major contributions that drive
+                            policy and change.</p>
                     </div>
                     <!-- Blog Item 1 -->
                     <div class="col-sm-6 col-lg-4 col-xl-3">
@@ -517,6 +551,11 @@
                 <div class="row g-4 justify-content-center">
                     <div class="w-100">
                         <h4 class="text-primary mb-4">Newsletters</h4>
+                        <p class="mb-3" style="text-align: justify;">Stay up to date with curated insights! Our
+                            newsletters bring you timely articles, expert opinions, and emerging trends, keeping you
+                            informed about the latest developments in governance, policy, and research. Subscribe to
+                            receive updates or browse past editions to stay in the loop.</p>
+
                     </div>
                     <div class="col-sm-6 col-lg-4 col-xl-3">
                         <div class="blog-item">
@@ -626,6 +665,10 @@
                 <div class="row g-4 justify-content-center">
                     <div class="w-100">
                         <h4 class="text-primary mb-4">Conference Proceedings</h4>
+                        <p class="mb-3" style="text-align: justify;">Explore detailed records of research presentations,
+                            discussions, and collaborations from leading conferences. This section serves as a valuable
+                            resource for scholars, professionals, and policymakers seeking knowledge exchange, academic
+                            discourse, and engagement with cutting-edge issues.</p>
                     </div>
                     <div class="col-sm-6 col-lg-4 col-xl-3">
                         <div class="blog-item">
@@ -734,6 +777,11 @@
                 <div class="row g-4 justify-content-center">
                     <div class="w-100">
                         <h4 class="text-primary mb-4">Multimedia Resources</h4>
+                        <p class="mb-3" style="text-align: justify;">Experience research beyond traditional reports!
+                            Dive into videos, podcasts, interactive content, and visual storytelling that make complex
+                            ideas accessible and engaging. This section offers dynamic formats to help you explore
+                            research in an intuitive and insightful way.</p>
+
                     </div>
                     <div class="col-sm-6 col-lg-4 col-xl-3">
                         <div class="blog-item">

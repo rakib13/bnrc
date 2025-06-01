@@ -104,35 +104,40 @@
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
-    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div id="top-logo" class="px-3 py-1 shadow shadow-1 rounded-pill">
-                    <a href="#" class="navbar-brand d-flex align-items-center p-0">
-                        <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2" style="height: 7§0px; width: auto;">
-                        <span class="d-flex flex-column">
-                            <small class="brand-maintext" style="font-size: 16px;">Bangladesh
-                                Nationalist</small>
-                            <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
-                        </span>
-                    </a>
-                    <p
-                        class="mx-auto text-center pb-0 pt-1 mt-1 mb-0 text-dark border border-1 border-bottom-0 border-start-0 border-end-0 border-top-2 border-dark">
-                        <small> <strong>Estd. by the Chairperson Since 2016</strong></small>
-                    </p>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-0 mx-lg-auto">
-                        <a href="./index.html" class="nav-item nav-link border-right active"><strong>Home</strong></a>
-                        <!-- <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a> -->
-                        <!-- about navbar start -->
-                        <div class="nav-item dropdown">
+    <div class="container-fluid nav-bar px-lg-0 px-md-0 px-sm-1">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div id="top-logo" class="px-1 py-1 shadow shadow-1 rounded-pill">
+                <a href="#" class="navbar-brand d-flex align-items-center p-0 me-0 ">
+                    <img src="./img/nav-logo.png" alt="Logo BNRC">
+                </a>
+                <!-- <a href="#" class="navbar-brand d-flex align-items-center p-0 me-0 ">
+                    <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="ms-3 me-2" style="height: 65px; width: auto;">
+                    <span class="d-flex flex-column me-0">
+                        <small class="brand-maintext" style="font-size: 16px;">Bangladesh
+                            Nationalist</small>
+                        <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
+                    </span>
+                </a>
+                <p class="mx-auto text-center pb-0 pt-0 ms-5 me-5 mt-0 mb-0 text-dark border border-1 border-bottom-2 border-start-0 border-end-0 border-top-0 border-dark"
+                    style="line-height:1;">
+                    <small style="font-size: 12px;"> <strong>Estd. by the auth. of Khaleda Zia 2016</strong></small>
+                </p> -->
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-0 mx-lg-auto">
+                    <a href="./index.html" class="nav-item nav-link border-right active"><strong>Home</strong></a>
+                    <!-- <a href="./about.html" class="nav-item nav-link"><strong>About BNRC</strong></a> -->
+                    <!-- about navbar start -->
+                    <div class="nav-item dropdown">
                             <a href="./about.html" class="nav-item nav-link dropdown-toggle" id="aboutDropdownToggle"
                                 role="button" onclick="handleAboutClick(event)">
-                                <span><strong>About BNRC</strong></span>
+                                <span class="about-label">
+                                    <strong>About BNRC</strong>
+                                    <span class="arrow">▼</span>
+                                </span>
                             </a>
                             <div class="dropdown-menu custom-dropdown-menu">
                                 <div class="d-flex flex-row flex-wrap gap-2">
@@ -153,8 +158,9 @@
                                         Functions of BNRC
                                     </button>
                                 </div>
+
                                 <!-- Leadership & Governance -->
-                                <div class="position-relative">
+                                <div class="position-relative mt-2">
                                     <button class="custom-dropdown-btn" onclick="toggleSubmenu('lg-submenu')">
                                         Leadership & Governance
                                     </button>
@@ -162,20 +168,40 @@
                                         <button class="btn btn-link text-start w-100 my-1"
                                             onclick="showSection('leaders', event)">
                                             Our Supreme Leaders
+
+
+                                            <!-- <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Chairperson', event)">
+                                                Chairperson Begum Khaleda Zia
+                                            </button>
+                                            <button class="btn btn-link text-start w-100 my-1"
+                                                onclick="showSection('Acting Chairperson', event)"> Acting Chairperson
+                                                Tarique Rahman
+                                            </button>
+ -->
+
                                         </button>
-                                        <button class="btn btn-link text-start w-100 my-1"
-                                            onclick="showSection('Chairperson', event)">
+                                        <!-- <button class="btn btn-link text-start w-100 my-1" onclick="showSection('Chairperson', event)">
                                             Chairperson Begum Khaleda Zia
                                         </button>
-                                        <button class="btn btn-link text-start w-100 my-1"
-                                            onclick="showSection('Acting Chairperson', event)">
+                                        <button class="btn btn-link text-start w-100 my-1" onclick="showSection('Acting Chairperson', event)">
                                             Acting Chairperson Tarique Rahman
+                                        </button> -->
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('director', event)">
+                                            Board of Directors
                                         </button>
+
+                                        <button class="btn btn-link text-start w-100 my-1"
+                                            onclick="showSection('ceo', event)">
+                                            The Research Team
+                                        </button>
+
                                     </div>
                                 </div>
 
                                 <!-- Board of Directors -->
-                                <div class="position-relative">
+                                <!-- <div class="position-relative mt-2">
                                     <button class="custom-dropdown-btn" onclick="toggleSubmenu('bd-submenu')">
                                         Board of Directors
                                     </button>
@@ -189,14 +215,15 @@
                                             The Chief Executive Officer (CEO)
                                         </button>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <!-- about navbar end -->
-                        <!-- .........publication start................... -->
-                        <div class="nav-item dropdown">
+                    <!-- about navbar end -->
+                    <!-- .........publication start................... -->
+                   <div class="nav-item dropdown">
                             <a href="./publications.html" class="nav-link dropdown-toggle"><strong>Research &
-                                    Publications</strong></a>
+                                    Publications</strong>
+                                <span class="arrow">▼</span></a>
                             <div class="dropdown-menu custom-dropdown-menu">
                                 <div class="d-flex flex-row flex-wrap gap-2 p-2">
                                     <button class="custom-dropdown-btn" data-target="featured"
@@ -219,29 +246,18 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- ..................publication end.................. -->
-                        <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership
-                                                                                                        Legacy</strong></a> -->
+                    <!-- ..................publication end.................. -->
+                    <!-- <a href="./leadershiplegacy.html" class="nav-item nav-link"><strong>Leadership Legacy</strong></a> -->
 
-                        <div id="nav-logo" class="mx-4 px-3 py-0 shadow shadow-1 rounded-pill">
-                            <a href="#" class="navbar-brand d-flex align-items-center p-0">
-                                <img src="./img/logo-bnrc.png" alt="Logo BNRC" class="me-2"
-                                    style="height: 7§0px; width: auto;">
-                                <span class="d-flex flex-column">
-                                    <small class="brand-maintext" style="font-size: 16px;">Bangladesh
-                                        Nationalist</small>
-                                    <small class="brand-maintext" style="font-size: 16px;">Research Centre</small>
-                                </span>
-                            </a>
-                            <p
-                                class="mx-auto text-center pb-0 pt-1 text-dark border border-1 border-bottom-0 border-start-0 border-end-0 mt-1 border-top-2 border-dark">
-                                <small> <strong>(Est. by the auth. of Khaleda Zia in 2016)</strong></small>
-                            </p>
-                        </div>
-                        <!-- <a href="./publications.html" class="nav-item nav-link"><strong>Research &
+                    <div id="nav-logo" class="mx-1 px-1 py-0 shadow shadow-1 rounded-pill">
+                        <a href="#" class="navbar-brand d-flex align-items-center p-0 me-0 ">
+                            <img src="./img/tt.png" alt="Logo BNRC">
+                        </a>
+                    </div>
+                    <!-- <a href="./publications.html" class="nav-item nav-link"><strong>Research &
                                 Publications</strong></a> -->
-                        <!-- leadershiip legacy nav bar start -->
-                        <div class="nav-item dropdown">
+                    <!-- leadershiip legacy nav bar start -->
+                   <div class="nav-item dropdown">
                             <a href="./leadershiplegacy.html" class="nav-link dropdown-toggle"><strong>Leadership
                                     Legacy</strong>
                                 <span class="arrow">▼</span></a>
@@ -274,13 +290,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- leadership legacy end -->
-                        <a href="./share-your-thought.html" class="nav-item nav-link"><strong>Share your
-                                Thaught</strong></a>
-                    </div>
+                    <!-- leadership legacy end -->
+                    <a href="./share-your-thought.html" class="nav-item nav-link"><strong>Share your
+                            Thaught</strong></a>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </div>
     <!-- Navbar & Hero End -->
 
