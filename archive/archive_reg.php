@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -82,16 +85,16 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item ml-1">
-                            <a class="nav-link active fs-5" href="archive_reg.html">
+                            <a class="nav-link active fs-5" href="archive_reg.php">
                                 <i class="fas fa-user-plus"></i>&nbsp; Registration
                             </a>
                         </li>
                         <li class="nav-item ml-1">
-                            <a class="nav-link active fs-5" href="/DVS/MLogin">
+                            <a class="nav-link active fs-5" href="archive_login.php">
                                 <i class="fas fa-sign-in-alt"></i>&nbsp; Login
                             </a>
                         </li>
-                        <li class="nav-item ml-1">
+                        <!-- <li class="nav-item ml-1">
                             <a class="nav-link active fs-5" href="/DVS/DocumentVerification">
                                 <i class="fas fa-search"></i>&nbsp; Document Verification
                             </a>
@@ -105,7 +108,7 @@
                             <a class="nav-link active fs-5" href="/User/Support">
                                 <i class="fas fa-hands-helping"></i>&nbsp; Support
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>

@@ -24,7 +24,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 if (!empty($errors)) {
     $_SESSION['message'] = implode('<br>', $errors);
-    header("Location: archive_reg.html");
+    header("Location: archive_reg.php");
     exit;
 }
 
@@ -34,5 +34,5 @@ file_put_contents("registrations.txt", $record, FILE_APPEND);
 
 // Success
 $_SESSION['message'] = "Registration successful! OTP sent (simulated).";
-header("Location: archive_reg.html");
+header("Location: archive_reg.php");
 exit;
