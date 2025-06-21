@@ -787,3 +787,25 @@ function toggleSection(sectionId, checkbox) {
 }
 
 // share your  thought check box script END.................
+
+
+
+// search button find
+function searchDocument() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const listItems = document.querySelectorAll("#resultsList li");
+  let count = 0;
+
+  listItems.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    if (text.includes(input)) {
+      item.style.display = "list-item";
+      count++;
+    } else {
+      item.style.display = "none";
+    }
+  });
+
+  document.getElementById("resultCount").textContent =
+    `Search result: ${count}`;
+}

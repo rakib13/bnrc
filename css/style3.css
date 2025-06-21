@@ -658,3 +658,9 @@ html {
   text-decoration: underline;
 }
 /* share your thought provacy  check box   END */
+/* searh button */
+#resultsList li {
+  display: list-item;
+  margin: 5px 0;
+}
+/* searh button */

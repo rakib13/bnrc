@@ -80,8 +80,8 @@
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-flex justify-content-end">
                         <div class="d-flex border-end border-white pe-2">
-                            <a class="btn p-0 text-primary me-3" href="#"><i
-                                    class="fab fa-facebook-f text-white "></i></a>
+                            <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/bnrc.org"
+                                target="_blank"><i class="fab fa-facebook-f text-white "></i></a>
                             <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter text-white "></i></a>
                             <a class="btn p-0 text-primary me-3" href="#"><i
                                     class="fab fa-instagram text-white "></i></a>
@@ -89,13 +89,16 @@
                                     class="fab fa-linkedin-in text-white "></i></a>
                         </div>
                         <div class="input-group input-group-sm ms-2">
-                            <input type="text" class="form-control form-control-sm m-0 p-0 ps-1"
+                            <!-- <input type="text" class="form-control form-control-sm m-0 p-0 ps-1"
                                 style="height:25px !important;" placeholder="Search" aria-label="Recipient's username"
-                                aria-describedby="basic-addon2">
+                                aria-describedby="basic-addon2"> -->
                             <div class="input-group-append">
-                                <button class="btn btn-outline-light ps-2 pt-1 pe-2 pb-1 m-0" type="button">
-                                    <i class="fas fa-search text-white"></i></button>
+                                <button class="btn ps-2 pt-1 pe-2 pb-1 m-0" type="button" onclick="searchDocument()">
+                                    <i class=" fas fa-search text-white"></i></button>
                             </div>
+
+                            <!-- Show result count -->
+                            <div id="resultCount" class="fw-bold mt-2"></div>
                         </div>
                         <!-- <div class="position-relative rounded-pill ms-2">
                             <input class="form-control rounded-pill w-100 p-0 ps-2" type="text" placeholder="Search">
