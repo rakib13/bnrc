@@ -19,13 +19,18 @@ html {
 .custom-dropdown-menu {
   width: 220px !important;
   padding: 0.75rem !important;
-  border: 2px solid #2b6cb0 !important;
+  border: 0px solid #2b6cb0 !important;
   border-radius: 8px !important;
-  box-shadow: 0 6px 20px rgba(43, 108, 176, 0.1) !important;
-  background: white;
-  display: none;
+  box-shadow: 0 1px 10px rgba(43, 108, 176, 0.1) !important;
+  //background: white;
+  // display: none;
 }
-
+/* .custom-dropdown-menu {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  min-width: 300px;
+  // transition: all 0.3s ease-in-out;
+} */
 /* Compact dropdown buttons */
 .custom-dropdown-btn {
   width: 100%;
@@ -37,7 +42,12 @@ html {
   color: #2b6cb0;
   font-size: 14px;
   font-weight: 500;
-  transition: background 0.2s ease;
+  //transition: background 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Optional: if you're using full-width buttons */
+  padding-right: 1rem; /* Ensure space for the arrow */
 }
 
 .custom-dropdown-btn:hover {
@@ -572,6 +582,11 @@ ol {
   color: #7e1010; /* Tailwind's "blue-800" or dark blue tone */
   font-style: italic;
   //font-weight: 600;
+}
+
+.tall-image {
+  height: 400px;
+  object-fit: cover; /* crop or scale content as needed */
 }
 /* leadership and legacy */
 
