@@ -809,3 +809,5 @@ function searchDocument() {
   document.getElementById("resultCount").textContent =
     `Search result: ${count}`;
 }
+
+
