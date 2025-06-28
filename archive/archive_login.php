@@ -85,10 +85,10 @@
                     data-bs-target="#navbarTogglerDemo03">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="/"><i class="fas fa-home"></i>&nbsp;Home</a>
+                <!-- <a class="navbar-brand" href="/"><i class="fas fa-home"></i>&nbsp;Home</a> -->
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active fs-5" href="archive_reg.php"><i class="fas fa-user-plus"></i> Registration</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link active fs-5" href="archive_reg.php"><i class="fas fa-user-plus"></i> Registration</a></li> -->
                         <li class="nav-item"><a class="nav-link active fs-5" href="archive_login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                         <!-- <li class="nav-item"><a class="nav-link active fs-5" href="/DVS/DocumentVerification"><i class="fas fa-search"></i> Document Verification</a></li>
                         <li class="nav-item"><a class="nav-link active fs-5" href="/Home/firmCompanyAudited"><i class="fas fa-check"></i> Identify Auditor</a></li>
