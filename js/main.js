@@ -767,24 +767,26 @@ function highlightLegacySection(event) {
 // share your  thought check box script start.................
 
 function toggleSection(sectionId, checkbox) {
-  const anonymousCheck = document.getElementById('anonymousCheck');
-  const recognizedCheck = document.getElementById('recognizedCheck');
-  const anonymousSection = document.getElementById('anonymousSection');
-  const recognizedSection = document.getElementById('recognized');
+        const anonymousCheck = document.getElementById('anonymousCheck');
+        const recognizedCheck = document.getElementById('recognizedCheck');
 
-  if (checkbox.id === 'anonymousCheck' && checkbox.checked) {
-    recognizedCheck.checked = false;
-    anonymousSection.style.display = 'block';
-    recognizedSection.style.display = 'none';
-  } else if (checkbox.id === 'recognizedCheck' && checkbox.checked) {
-    anonymousCheck.checked = false;
-    recognizedSection.style.display = 'block';
-    anonymousSection.style.display = 'none';
-  } else {
-    // If unchecked, hide the corresponding section
-    document.getElementById(sectionId).style.display = 'none';
-  }
-}
+        document.getElementById('anonymousSection').style.display = 'none';
+        document.getElementById('recognizedSection').style.display = 'none';
+
+        if (checkbox.id === 'anonymousCheck') {
+            recognizedCheck.checked = false;
+            if (checkbox.checked) {
+                document.getElementById('anonymousSection').style.display = 'block';
+            }
+        }
+
+        if (checkbox.id === 'recognizedCheck') {
+            anonymousCheck.checked = false;
+            if (checkbox.checked) {
+                document.getElementById('recognizedSection').style.display = 'block';
+            }
+        }
+    }
 
 // share your  thought check box script END.................
 

@@ -1,3 +1,61 @@
+<?php
+
+require 'vendor/autoload.php';  // Composer autoload for PHPMailer
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (!isset($_POST['agree_terms'])) {
+        die("You must agree to the terms and privacy policy.");
+    }
+
+    // Prepare email body
+    $body = "";
+
+    if (isset($_POST['anonymous_check']) && !empty($_POST['anonymous_feedback'])) {
+        $body .= "Submission Type: Anonymous\n";
+        $body .= "Feedback: " . htmlspecialchars($_POST['anonymous_feedback']) . "\n";
+    } elseif (isset($_POST['recognized_check']) && !empty($_POST['recognized_feedback'])) {
+        $body .= "Submission Type: Recognized\n";
+        $body .= "Feedback: " . htmlspecialchars($_POST['recognized_feedback']) . "\n";
+        $body .= "Name: " . htmlspecialchars($_POST['name']) . "\n";
+        $body .= "Email: " . htmlspecialchars($_POST['email']) . "\n";
+        $body .= "Mobile: " . htmlspecialchars($_POST['mobile']) . "\n";
+    } else {
+        die("Invalid submission.");
+    }
+
+    try {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'sajedurtareq@gmail.com';   // Your Gmail
+        $mail->Password = 'abcd efgh ijkl mnop'; // Gmail App Password (NOT your Gmail password!)
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        $mail->setFrom('sajedurtareq@gmail.com', 'Feedback Form');
+        $mail->addAddress('sajedurtareq@gmail.com');  // Destination Email
+        $mail->Subject = 'Feedback Submission';
+        $mail->Body = $body;
+
+        $mail->send();
+
+        echo "<script>alert('Thank you! Your feedback has been sent.'); window.location.href='share-your-thought.php';</script>";
+        exit;
+    } catch (Exception $e) {
+        echo "<script>alert('Mailer Error: {$mail->ErrorInfo}'); window.location.href='share-your-thought.php';</script>";
+        exit;
+    }
+}
+?>
+
+
+<!-- HTML FORM BELOW -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -288,7 +346,7 @@
                         </div>
                     </div>
                     <!-- leadership legacy end -->
-                    <a href="./share-your-thought.html" class="nav-item nav-link"><strong>Share your
+                    <a href="./share-your-thought.php" class="nav-item nav-link"><strong>Share your
                             thoughts</strong></a>
                 </div>
             </div>
@@ -401,176 +459,74 @@
                     </p>
                 </div>
 
-                <div class="accordion-item">
-                    <div class="w-100">
-                        <h4 class="text-primary mb-4">Submit Your Thoughts:</h4>
-                    </div>
-                    <div class="col-lg-10 col-md-11 col-sm-12 wow fadeInUp">
-                        <div class="accordion accordion-flush" id="accrShareYourThought">
-                            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    <h4 class="text-primary mb-4">Submit Your Thoughts:</h4>
 
-                                <h2 class="h6 text-black mb-0 me-3">Select your preferred submission status:</h2>
+                    <!-- Submission Status Checkboxes -->
+                    <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                        <h2 class="h6 text-black mb-0 me-3">Select your preferred submission status:</h2>
 
-                                <div class="form-check d-flex align-items-center m-0">
-                                    <input class="form-check-input me-2" type="checkbox" id="anonymousCheck"
-                                        onchange="toggleSection('anonymousSection', this)">
-                                    <label class="form-check-label" for="anonymousCheck">A. Remain anonymous</label>
-                                </div>
+                        <div class="form-check d-flex align-items-center m-0">
+                            <input class="form-check-input me-2" type="checkbox" name="anonymous_check"
+                                id="anonymousCheck" onchange="toggleSection('anonymousSection', this)">
+                            <label class="form-check-label" for="anonymousCheck">A. Remain anonymous</label>
+                        </div>
 
-                                <div class="form-check d-flex align-items-center m-0">
-                                    <input class="form-check-input me-2" type="checkbox" id="recognizedCheck"
-                                        onchange="toggleSection('recognized', this)">
-                                    <label class="form-check-label" for="recognizedCheck">B. Be recognized</label>
-                                </div>
-                            </div>
+                        <div class="form-check d-flex align-items-center m-0">
+                            <input class="form-check-input me-2" type="checkbox" name="recognized_check"
+                                id="recognizedCheck" onchange="toggleSection('recognizedSection', this)">
+                            <label class="form-check-label" for="recognizedCheck">B. Be recognized</label>
                         </div>
                     </div>
 
-                    <!-- first check box.............................. -->
-                    <div id="recognized" style="display: none;" class="mt-4">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-general-feed"
-                                aria-expanded="true" aria-controls="flush-general-feed">
-                                <span class="fw-bolder">General feedback: </span> Tell us what you think about
-                                our
-                                projects or initiatives
-                            </button>
-                        </h2>
-                        <div id="flush-general-feed" class="accordion-collapse collapse show"
-                            data-bs-parent="#accrShareYourThought">
-                            <div class="accordion-body">
-                                <div class="row">
-
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                                    <div class="form-floating col-md-10 col-lg-10 col-sm-12 mb-3">
-                                        <textarea id="msg-general-feed" class="form-control" style="max-height: 250px;"
-                                            placeholder="What is on your mind ..."></textarea>
-                                        <label for="msg-general-feed" class="form-label mx-2 my-1">What is on
-                                            your
-                                            mind.......</label>
-                                    </div>
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                                    <div class="col-md-10 col-lg-10 col-sm-12 mb-3">
-                                        <input class="form-control" type="file" id="formFile">
-                                    </div>
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-
-
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                                    <div class="col-md-10 col-lg-10 col-sm-12 mb-5">
-                                        <div class="row">
-                                            <div class="form-floating col-md-10 col-lg-10 col-sm-12">
-                                                <input type="text" class="form-control" id="genUserName"
-                                                    placeholder="Name">
-                                                <label for="genUserName" class="form-label mx-2 my-1">Name</label>
-                                            </div>
-                                            <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
-                                                <input type="email" class="form-control" id="genUserName"
-                                                    placeholder="Email">
-                                                <label for="genUserName" class="form-label mx-2 my-1">E-mail</label>
-                                            </div>
-                                            <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
-                                                <input type="text" class="form-control" id="genUserName"
-                                                    placeholder="Mobile No.">
-                                                <label for="genUserName" class="form-label mx-2 my-1">Mobile
-                                                    No.</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- seconed check bo...................... -->
+                    <!-- Anonymous Section -->
                     <div id="anonymousSection" style="display: none;" class="mt-4">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed btn-light bg-primary text-white rounded rounded-top"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-general-feed"
-                                aria-expanded="true" aria-controls="flush-general-feed">
-                                <span class="fw-bolder">General feedback: </span> Tell us what you think about
-                                our
-                                projects or initiatives
-                            </button>
-                        </h2>
-                        <div id="flush-general-feed" class="accordion-collapse collapse show"
-                            data-bs-parent="#accrShareYourThought">
-                            <div class="accordion-body">
-                                <div class="row">
-
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                                    <div class="form-floating col-md-10 col-lg-10 col-sm-12 mb-3">
-                                        <textarea id="msg-general-feed" class="form-control" style="max-height: 250px;"
-                                            placeholder="What is on your mind ..."></textarea>
-                                        <label for="msg-general-feed" class="form-label mx-2 my-1">What is on
-                                            your
-                                            mind.......</label>
-                                    </div>
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                                    <div class="col-md-10 col-lg-10 col-sm-12 mb-3">
-                                        <input class="form-control" type="file" id="formFile">
-                                    </div>
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-
-
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                                    <!-- <div class="col-md-10 col-lg-10 col-sm-12 mb-5">
-                                        <div class="row">
-                                            <div class="form-floating col-md-10 col-lg-10 col-sm-12">
-                                                <input type="text" class="form-control" id="genUserName"
-                                                    placeholder="Name">
-                                                <label for="genUserName" class="form-label mx-2 my-1">Name</label>
-                                            </div>
-                                            <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
-                                                <input type="email" class="form-control" id="genUserName"
-                                                    placeholder="Email">
-                                                <label for="genUserName" class="form-label mx-2 my-1">E-mail</label>
-                                            </div>
-                                            <div class="form-floating col-md-6 col-lg-6 col-sm-12 mt-3">
-                                                <input type="text" class="form-control" id="genUserName"
-                                                    placeholder="Mobile No.">
-                                                <label for="genUserName" class="form-label mx-2 my-1">Mobile
-                                                    No.</label>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-
-                                </div>
-                            </div>
-
+                        <h5>Anonymous Feedback</h5>
+                        <div class="mb-3">
+                            <textarea name="anonymous_feedback" class="form-control" placeholder="Your feedback..."
+                                required></textarea>
                         </div>
-
-                    </div>
-
-                    <div class="col-md-10 col-lg-10 col-sm-12 mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="agreeTerms" required>
-                            <label class="form-check-label" for="agreeTerms">
-                                I agree to the <a href="terms.html" target="_blank">terms</a> and <a href="privacy.html"
-                                    target="_blank">privacy policy</a>.
-                            </label>
+                        <div class="mb-3">
+                            <input type="file" class="form-control" name="anonymous_file">
                         </div>
                     </div>
 
-                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-                    <div class="col-md-10 col-lg-10 col-sm-12 mb-4 text-center">
+                    <!-- Recognized Section -->
+                    <div id="recognizedSection" style="display: none;" class="mt-4">
+                        <h5>Recognized Feedback</h5>
+                        <div class="mb-3">
+                            <textarea name="recognized_feedback" class="form-control" placeholder="Your feedback..."
+                                required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" class="form-control" name="recognized_file">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="mobile" placeholder="Your Mobile Number"
+                                required>
+                        </div>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="agree_terms" id="agreeTerms" required>
+                        <label class="form-check-label" for="agreeTerms">
+                            I agree to the <a href="terms.html" target="_blank">terms</a> and <a href="privacy.html"
+                                target="_blank">privacy policy</a>.
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center mb-4">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                    <div class="col-md-1 col-lg-1 col-sm-12"></div>
-
-                </div>
+                </form>
                 <!-- <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button
