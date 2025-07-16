@@ -88,7 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="css/style2.css" rel="stylesheet"> -->
     <link href="css/style3.css" rel="stylesheet">
 </head>
 
