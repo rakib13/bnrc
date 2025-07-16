@@ -51,8 +51,6 @@
         // ],
     });
 
-
-
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -114,33 +112,39 @@
 // ....................publication js.....................................
 
 document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("pdfModal");
-    const iframe = document.getElementById("pdfIframe");
-    const closeBtn = document.querySelector("close-modal");
+    const pdfmodal = document.getElementById("customPdfFrame");
+    const pdfiframe = document.getElementById("customPdfFrame");
+    const pdfcloseBtn = document.getElementById("customCloseBtn"); // ✅ Fixed
 
-    document.querySelectorAll('.pdf-link').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const pdfUrl = this.getAttribute('data-pdf');
-        if (pdfUrl) {
-          iframe.src = pdfUrl;
-          modal.style.display = "block";
-        }
-      });
+    // Handle "View Details" PDF links
+    document.querySelectorAll('.pdf-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const pdfUrl = this.getAttribute('data-pdf');
+            if (pdfUrl) {
+                pdfiframe.src = pdfUrl;
+                pdfmodal.style.display = 'flex';
+            }
+        });
     });
 
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-      iframe.src = ""; // clear iframe when closing
-    };
+    // Handle modal close button
+    if (pdfcloseBtn) {
+        pdfcloseBtn.addEventListener('click', function () {
+            pdfmodal.style.display = 'none';
+            pdfiframe.src = ''; // Clear iframe
+        });
+    }
 
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-        iframe.src = "";
-      }
-    };
+    // Close modal if clicked outside content
+    window.addEventListener('click', function (e) {
+        if (e.target === pdfmodal) {
+            pdfmodal.style.display = 'none';
+            pdfiframe.src = '';
+        }
+    });
 });
+
 
 function featuredSection(event) {
   const targetId = event.currentTarget.getAttribute('data-target');
@@ -490,149 +494,149 @@ window.onload = () => {
 
 // publication js
 
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("pdfModal");
-    const iframe = document.getElementById("pdfIframe");
-    const closeBtn = document.querySelector(".modal .close");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const modal = document.getElementById("pdfModal");
+//     const iframe = document.getElementById("pdfIframe");
+//     const closeBtn = document.querySelector(".modal .close");
 
-    document.querySelectorAll('.pdf-link').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const pdfUrl = this.getAttribute('data-pdf');
-        if (pdfUrl) {
-          iframe.src = pdfUrl;
-          modal.style.display = "block";
-        }
-      });
-    });
+//     document.querySelectorAll('.pdf-link').forEach(function(link) {
+//       link.addEventListener('click', function(e) {
+//         e.preventDefault();
+//         const pdfUrl = this.getAttribute('data-pdf');
+//         if (pdfUrl) {
+//           iframe.src = pdfUrl;
+//           modal.style.display = "block";
+//         }
+//       });
+//     });
 
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-      iframe.src = ""; // clear iframe when closing
-    };
+//     closeBtn.onclick = function () {
+//       modal.style.display = "none";
+//       iframe.src = ""; // clear iframe when closing
+//     };
 
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-        iframe.src = "";
-      }
-    };
-});
+//     window.onclick = function (event) {
+//       if (event.target == modal) {
+//         modal.style.display = "none";
+//         iframe.src = "";
+//       }
+//     };
+// });
 
 // gallery js.........................................................................
-document.addEventListener('DOMContentLoaded', function() {
-    // Load More Videos functionality
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    const videoContainer = document.getElementById('video-container');
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Load More Videos functionality
+//     const loadMoreBtn = document.getElementById('loadMoreBtn');
+//     const videoContainer = document.getElementById('video-container');
     
-    if (loadMoreBtn && videoContainer) {
-        const allVideos = videoContainer.querySelectorAll('.col-md-6.col-lg-6.col-xl-3');
-        let visibleCount = 4; // Number initially visible
+//     if (loadMoreBtn && videoContainer) {
+//         const allVideos = videoContainer.querySelectorAll('.col-md-6.col-lg-6.col-xl-3');
+//         let visibleCount = 4; // Number initially visible
         
-        // Initially hide all videos beyond the first 4
-        allVideos.forEach((video, index) => {
-            if (index >= visibleCount) {
-                video.style.display = 'none';
-            }
-        });
+//         // Initially hide all videos beyond the first 4
+//         allVideos.forEach((video, index) => {
+//             if (index >= visibleCount) {
+//                 video.style.display = 'none';
+//             }
+//         });
         
-        loadMoreBtn.addEventListener('click', function(e) {
-            e.preventDefault();
+//         loadMoreBtn.addEventListener('click', function(e) {
+//             e.preventDefault();
             
-            // Show next 4 videos
-            const nextBatch = visibleCount + 4;
+//             // Show next 4 videos
+//             const nextBatch = visibleCount + 4;
             
-            for (let i = visibleCount; i < nextBatch && i < allVideos.length; i++) {
-                if (allVideos[i]) {
-                    allVideos[i].style.display = 'block';
-                }
-            }
+//             for (let i = visibleCount; i < nextBatch && i < allVideos.length; i++) {
+//                 if (allVideos[i]) {
+//                     allVideos[i].style.display = 'block';
+//                 }
+//             }
             
-            visibleCount = nextBatch;
+//             visibleCount = nextBatch;
             
-            // Hide button if all videos are visible
-            if (visibleCount >= allVideos.length) {
-                loadMoreBtn.style.display = 'none';
-            }
-        });
-    }
+//             // Hide button if all videos are visible
+//             if (visibleCount >= allVideos.length) {
+//                 loadMoreBtn.style.display = 'none';
+//             }
+//         });
+//     }
 
-    // Video popup functionality - ONLY opens on click
-    document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
-        thumbnail.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Get video ID from closest parent with data-video-id attribute
-            const videoContainer = this.closest('[data-video-id]');
-            if (!videoContainer) return; // Safety check
+//     // Video popup functionality - ONLY opens on click
+//     document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
+//         thumbnail.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             // Get video ID from closest parent with data-video-id attribute
+//             const videoContainer = this.closest('[data-video-id]');
+//             if (!videoContainer) return; // Safety check
             
-            const videoId = videoContainer.getAttribute('data-video-id');
-            if (!videoId) return; // Safety check
+//             const videoId = videoContainer.getAttribute('data-video-id');
+//             if (!videoId) return; // Safety check
             
-            openVideoPopup(videoId);
-        });
-    });
+//             openVideoPopup(videoId);
+//         });
+//     });
     
-    // Video popup functions
-    function openVideoPopup(videoId) {
-        // Close any existing popup first
-        closeVideoPopup();
+//     // Video popup functions
+//     function openVideoPopup(videoId) {
+//         // Close any existing popup first
+//         closeVideoPopup();
         
-        const popup = document.createElement('div');
-        popup.className = 'video-popup-modal';
-        popup.style.display = 'none'; // Start hidden
+//         const popup = document.createElement('div');
+//         popup.className = 'video-popup-modal';
+//         popup.style.display = 'none'; // Start hidden
         
-        popup.innerHTML = `
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <button class="close-modal">×</button>
-                <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-            </div>
-        `;
+//         popup.innerHTML = `
+//             <div class="modal-overlay"></div>
+//             <div class="modal-content">
+//                 <button class="close-modal">×</button>
+//                 <iframe width="560" height="315" 
+//                     src="https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0" 
+//                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+//                     allowfullscreen></iframe>
+//             </div>
+//         `;
         
-        document.body.appendChild(popup);
+//         document.body.appendChild(popup);
         
-        // Only show after setting up everything
-        popup.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+//         // Only show after setting up everything
+//         popup.style.display = 'flex';
+//         document.body.style.overflow = 'hidden';
         
-        // Add event listeners for the new popup
-        popup.querySelector('.modal-overlay').addEventListener('click', closeVideoPopup);
-        popup.querySelector('.close-modal').addEventListener('click', closeVideoPopup);
+//         // Add event listeners for the new popup
+//         popup.querySelector('.modal-overlay').addEventListener('click', closeVideoPopup);
+//         popup.querySelector('.close-modal').addEventListener('click', closeVideoPopup);
         
-        // Autoplay after popup is shown
-        const iframe = popup.querySelector('iframe');
-        if (iframe) {
-            // Small delay to ensure iframe is ready
-            setTimeout(() => {
-                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0`;
-            }, 100);
-        }
-    }
+//         // Autoplay after popup is shown
+//         const iframe = popup.querySelector('iframe');
+//         if (iframe) {
+//             // Small delay to ensure iframe is ready
+//             setTimeout(() => {
+//                 iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0`;
+//             }, 100);
+//         }
+//     }
     
-    function closeVideoPopup() {
-        const popup = document.querySelector('.video-popup-modal');
-        if (popup) {
-            // Pause video before removing
-            const iframe = popup.querySelector('iframe');
-            if (iframe) {
-                // Properly stop the video
-                iframe.src = '';
-            }
-            popup.remove();
-            document.body.style.overflow = '';
-        }
-    }
+//     function closeVideoPopup() {
+//         const popup = document.querySelector('.video-popup-modal');
+//         if (popup) {
+//             // Pause video before removing
+//             const iframe = popup.querySelector('iframe');
+//             if (iframe) {
+//                 // Properly stop the video
+//                 iframe.src = '';
+//             }
+//             popup.remove();
+//             document.body.style.overflow = '';
+//         }
+//     }
     
-    // Close with ESC key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeVideoPopup();
-        }
-    });
-});
+//     // Close with ESC key
+//     document.addEventListener('keydown', function(e) {
+//         if (e.key === 'Escape') {
+//             closeVideoPopup();
+//         }
+//     });
+// });
 
 
 // mission start
@@ -679,9 +683,9 @@ var myCarousel = new bootstrap.Carousel(document.getElementById('headerCarousel'
 
 // PDF Modal Handling
 document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('pdf-modal');
-    const frame = document.getElementById('pdf-frame');
-    const closeBtn = document.getElementById('close-modal');
+    const modal = document.getElementById('customPdfModal');
+    const frame = document.getElementById('customPdfFrame');
+    const closeBtn = document.getElementById('customCloseBtn');
 
     // 1) Wire up every "View Details" link
     document.querySelectorAll('.pdf-link').forEach(link => {
